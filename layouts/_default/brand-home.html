@@ -3,7 +3,7 @@
      site baseof: it replicates the design zip's shell (oca/* partials +
      oca-variations.css) so the six-theme pill switcher can run without touching
      production layouts. Promote to layouts/index.html only after OCA picks a theme. */}}
-<html lang="{{ site.LanguageCode | default "en" }}">
+<html lang="{{ site.Language.Locale | default "en" }}">
 <head>
 {{ partial "oca/head.html" . }}
 {{ if .Params.noindex }}<meta name="robots" content="noindex">{{ end }}
@@ -23,7 +23,7 @@
 {{ partial "oca/header.html" . }}
 <main>
 
-{{ $d := site.Data.homepage }}
+{{ $d := hugo.Data.homepage }}
 
 <section class="hero">
   <div class="container grid">
