@@ -1,6 +1,6 @@
 # Open City Advocates — Hugo config (build target: Hugo 0.128.0, GitHub Pages)
 # baseURL is overridden by the CI workflow's --baseURL flag; kept here for local builds.
-baseURL = "https://anotherpanacea-eng.github.io/open-city-advocates/"
+baseURL = "https://open-city-advocates.github.io/open-city-advocates/"
 title = "Open City Advocates"
 enableRobotsTXT = true
 enableGitInfo = false
