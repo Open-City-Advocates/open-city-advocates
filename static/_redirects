@@ -1,0 +1,21 @@
+# Permanent redirects for addresses the Squarespace site published that the
+# new site retires. Cloudflare reads this file from the build output.
+# Format: <old path> <new path> <status>
+# Each old path is listed with and without a trailing slash: Cloudflare
+# matches them exactly, and old links may carry either form.
+
+# The live About Us menu item was the homepage.
+/about-us  /  301
+/about-us/  /  301
+
+# Archived bio (OCA's first client, later off the board).
+/romon-bunch  /our-team  301
+/romon-bunch/  /our-team  301
+
+# Staff Attorney posting that closed June 21, 2024.
+/join-our-team-1  /join-us  301
+/join-our-team-1/  /join-us  301
+
+# Empty page on the live site; the archive is the useful destination.
+/policy-advocacy/record-sealing  /policy-advocacy  301
+/policy-advocacy/record-sealing/  /policy-advocacy  301
