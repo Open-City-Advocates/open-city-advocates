@@ -49,10 +49,29 @@ retired Squarespace addresses with 301s.
 
 Check all of this locally with `npm run build && npm run preview`.
 
+## Before the cutover: move DNS to Cloudflare
+
+Checked 2026-10-22: `opencityadvocates.org` is **not** on Cloudflare. Its
+nameservers are `ns1/ns2.greengeeks.net`; `www` is a CNAME to
+`ext-cust.squarespace.com` and the apex points at Squarespace's four A records.
+Custom Domains on a Worker need the zone on Cloudflare, so this comes first:
+
+1. In the Cloudflare dashboard (the account `wrangler whoami` shows), add
+   `opencityadvocates.org` as a site (Free plan is enough). Cloudflare scans
+   the current records; check the import against the GreenGeeks DNS inventory
+   and add anything it missed. **Every MX, TXT (SPF, DKIM, DMARC, site
+   verifications) and CNAME record must be there before the nameservers
+   change**, or mail to `@opencityadvocates.org` breaks. Leave the Squarespace
+   `www` CNAME and apex A records in place (DNS-only, grey cloud) so the
+   Squarespace site keeps serving.
+2. At the registrar, change the nameservers to the two Cloudflare assigns.
+   Wait for the zone to show **Active** (minutes to a day). Nothing visible
+   changes: the same records now answer from Cloudflare.
+3. Only then do the cutover below.
+
 ## Cutover from Squarespace
 
-This happens after DNS has already moved to Cloudflare, with the Squarespace
-site records still in place.
+With the zone active on Cloudflare and the Squarespace records still in place:
 
 1. In the Worker → Settings → Domains & Routes, add `www.opencityadvocates.org`
    as a Custom Domain. If Cloudflare refuses because a record already exists
@@ -71,3 +90,14 @@ site records still in place.
 **Rollback:** remove the two Custom Domains and restore the Squarespace
 records from the DNS inventory (DNS-only). The Squarespace site stays
 available until the plan is canceled in January.
+
+## What the Worker cannot replace
+
+Squarespace hosted two kinds of forms: "Request Access" on the Defense Guide
+page and a contact form on each staff bio. The static site turns them into
+`mailto:` links to `info@opencityadvocates.org` (see README.md). The homepage
+video was a Squarespace-hosted MP4; the site embeds OCA's YouTube upload of the
+same film, "20 Years of Open City Advocates", instead. Everything else on the
+Squarespace site (every page in its sitemap, every image, PDF and embed) is
+served by the Worker or redirected; `scripts/check-route-inventory.mjs`
+checks the addresses on every build.
