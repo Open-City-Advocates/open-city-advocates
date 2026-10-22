@@ -5,7 +5,7 @@
 // must be a built page, a redirect in static/_redirects, or listed in
 // RETIRED (Squarespace template pages that never had real content).
 
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, statSync } from "node:fs";
 
 const PUBLIC = "public";
 const SITE = "https://www.opencityadvocates.org";
@@ -78,10 +78,13 @@ const RETIRED = [
 const errors = [];
 const fail = (message) => errors.push(message);
 
-// The file Cloudflare serves for a path, or null.
+// The file Cloudflare serves for a path, or null. A directory is not a page:
+// public/news-updates/ exists alongside news-updates.html, and must not stand
+// in for it if that file goes missing.
+const isFile = (file) => existsSync(file) && statSync(file).isFile();
 function builtFile(path) {
   const candidates = path === "/" ? ["index.html"] : [`${path.slice(1)}.html`, path.slice(1), `${path.slice(1)}/index.html`];
-  return candidates.find((file) => existsSync(`${PUBLIC}/${file}`) && !file.endsWith("/")) ?? null;
+  return candidates.find((file) => isFile(`${PUBLIC}/${file}`)) ?? null;
 }
 
 // static/_redirects, as copied into the build.
