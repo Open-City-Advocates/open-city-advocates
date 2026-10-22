@@ -1,7 +1,8 @@
-# Hugo build artifacts
+# Build output and tooling (see README)
 /public/
-/resources/_gen/
-.hugo_build.lock
+/node_modules/
+/.astro/
+.wrangler/
 
 # OS
 .DS_Store

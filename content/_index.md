@@ -2,7 +2,6 @@
 title: "Open City Advocates"
 mission: "Open City Advocates provides youth-centered legal defense and holistic advocacy for young people after sentencing in the DC juvenile justice system and works for systemic improvements to the juvenile justice system, both locally and nationally, to better the lives of marginalized children and youth."
 vision: "Open City Advocates envisions a legal system that is equitable, fair, and compassionate towards children and youth."
-aliases: ["/about-us/"]
 ---
 
 ## Who We Serve

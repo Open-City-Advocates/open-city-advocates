@@ -1,0 +1,193 @@
+---
+// Every page except the homepage: team bios, news posts, testimony, the
+// section lists (News, Join Us, Policy & Advocacy), and the Our Team page.
+import { render } from "astro:content";
+import Base from "../layouts/Base.astro";
+import {
+  byDateDesc,
+  findPage,
+  isSection,
+  isoDate,
+  longDate,
+  pageUrl,
+  pages,
+  sectionOf,
+  sectionPages,
+  shortDate,
+  type Page,
+} from "../lib/site";
+
+export async function getStaticPaths() {
+  const all = await pages();
+  return all
+    .filter((page) => page.id !== "_index")
+    .filter((page) => !page.data.href) // archive entries that link elsewhere
+    .map((page) => ({ params: { slug: pageUrl(page).slice(1) }, props: { page, all } }));
+}
+
+interface Props {
+  page: Page;
+  all: Page[];
+}
+
+const { page, all } = Astro.props;
+const { Content } = await render(page);
+const data = page.data;
+const path = pageUrl(page);
+const section = sectionOf(page);
+
+const kind = isSection(page)
+  ? section === "policy-advocacy"
+    ? "policy-list"
+    : "list"
+  : data.layout === "our-team"
+    ? "our-team"
+    : section === "policy-advocacy"
+      ? "policy-single"
+      : "single";
+
+// Section lists: newest first.
+const children = isSection(page) ? byDateDesc(sectionPages(all, section)) : [];
+
+// Policy & Advocacy archive: grouped by year, newest year first.
+const years = new Map<string, Page[]>();
+if (kind === "policy-list") {
+  for (const doc of children) {
+    const year = String(doc.data.date?.getUTCFullYear() ?? "");
+    if (!years.has(year)) years.set(year, []);
+    years.get(year)!.push(doc);
+  }
+}
+
+// Our Team: staff cards and the board list, resolved to their bio pages.
+const staff = (data.staff ?? [])
+  .map((member) => ({ member, bio: findPage(all, member.page) }))
+  .filter((entry) => entry.bio);
+const board = (data.board ?? []).map((url) => findPage(all, url)).filter((bio): bio is Page => Boolean(bio));
+---
+<Base title={data.title} description={data.description} path={path} ogType={isSection(page) ? "website" : "article"}>
+{kind === "single" && (
+  <article class="wrap prose article">
+    {section === "news-updates" ? (
+      <>
+        <p class="eyebrow">News &amp; Updates</p>
+        <h1>{data.title}</h1>
+        <p class="post-meta">
+          {data.date && <time datetime={isoDate(data.date)}>{longDate(data.date)}</time>}
+          {data.author && ` · ${data.author}`}
+        </p>
+      </>
+    ) : data.role ? (
+      <>
+        <p class="eyebrow">{data.role}</p>
+        <h1>{data.title}</h1>
+      </>
+    ) : (
+      <h1>{data.title}</h1>
+    )}
+    <Content />
+    {section === "news-updates" && <p class="back-link"><a href="/news-updates">← All news &amp; updates</a></p>}
+  </article>
+)}
+
+{kind === "list" && (
+  <div class="wrap prose">
+    <h1>{data.title}</h1>
+    <Content />
+    {children.length > 0 && (
+      <ul class="post-list">
+        {children.map((child) => (
+          <li class="post-list-item">
+            <a class="post-list-link" href={pageUrl(child)}>{child.data.title}</a>
+            {child.data.date && <span class="post-list-date">{shortDate(child.data.date)}</span>}
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+)}
+
+{kind === "policy-list" && (
+  <>
+    <section class="archive-hero">
+      <div class="wrap">
+        <p class="eyebrow">Policy &amp; Advocacy</p>
+        <h1>{data.title}</h1>
+        {page.body?.trim() && <div class="lede"><Content /></div>}
+      </div>
+    </section>
+
+    <div class="wrap archive">
+      {[...years].map(([year, docs]) => (
+        <section class="year-group">
+          <div class="year-head">
+            <span class="yr">{year}</span>
+            <span class="yc">{docs.length} item{docs.length > 1 ? "s" : ""}</span>
+          </div>
+          {docs.map((doc) => (
+            <a
+              class="doc-row"
+              href={doc.data.href ? doc.data.href.replace(/(.)\/$/, "$1") : pageUrl(doc)}
+              target={doc.data.href ? "_blank" : undefined}
+              rel={doc.data.href ? "noopener" : undefined}
+            >
+              <div class="ddate">{doc.data.docdate ?? (doc.data.date ? shortDate(doc.data.date) : "")}</div>
+              <div class="dmeta">
+                <div class="dttl">{doc.data.title}</div>
+                {doc.data.by && <div class="dby">{doc.data.by}</div>}
+                <div class="dtags"><span class="dtag type">{doc.data.doctype}</span>{doc.data.tags.map((tag) => <span class="dtag">{tag}</span>)}</div>
+              </div>
+              <div class="dgo">Read <span class="arw">&rarr;</span></div>
+            </a>
+          ))}
+        </section>
+      ))}
+    </div>
+  </>
+)}
+
+{kind === "policy-single" && (
+  <article class="wrap prose document">
+    <p class="eyebrow">{data.doctype}{data.docdate && ` · ${data.docdate}`}</p>
+    <h1>{data.title}</h1>
+    {data.by && <p class="doc-by">{data.by}</p>}
+    {data.tags.length > 0 && <div class="dtags">{data.tags.map((tag) => <span class="dtag">{tag}</span>)}</div>}
+
+    <Content />
+
+    <div class="cite-note">
+      <p>Free to quote and share with attribution.</p>
+      <p><a href="/policy-advocacy">&larr; Back to Policy &amp; Advocacy</a></p>
+    </div>
+  </article>
+)}
+
+{kind === "our-team" && (
+  <div class="wrap team-page">
+    <h1>{data.title}</h1>
+
+    {staff.length > 0 && (
+      <ul class="team-grid" role="list">
+        {staff.map(({ member, bio }) => (
+          <li class="team-card">
+            <a class="team-card-link" href={pageUrl(bio!)}>
+              {member.photo && <img class="team-card-photo" src={`/${member.photo.replace(/^\//, "")}`} alt={bio!.data.title} width="400" height="400" loading="lazy" />}
+              <span class="team-card-name">{bio!.data.title}</span>
+            </a>
+            {bio!.data.role && <span class="team-card-role">{bio!.data.role}</span>}
+          </li>
+        ))}
+      </ul>
+    )}
+
+    {board.length > 0 && (
+      <>
+        <h2 id="board-of-directors">Board of Directors</h2>
+        <ul class="board-grid" role="list">
+          {board.map((bio) => <li class="board-item"><a href={pageUrl(bio)}>{bio.data.title.split(",")[0]}</a></li>)}
+        </ul>
+      </>
+    )}
+  </div>
+)}
+</Base>

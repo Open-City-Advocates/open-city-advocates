@@ -1,9 +1,0 @@
-{{- /* Root-absolute in-content links (e.g. /our-team, /A-Call-….pdf) need the baseURL
-       subpath on GitHub Pages; relURL is unreliable here, so join against the home
-       permalink. External links pass through and open in a new tab. */ -}}
-{{- $dest := .Destination -}}
-{{- $external := or (strings.HasPrefix $dest "http") (strings.HasPrefix $dest "mailto:") (strings.HasPrefix $dest "tel:") -}}
-{{- if and (strings.HasPrefix $dest "/") (not $external) -}}
-  {{- $dest = path.Join site.Home.RelPermalink $dest -}}
-{{- end -}}
-<a href="{{ $dest }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>

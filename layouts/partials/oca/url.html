@@ -1,5 +1,0 @@
-{{- /* Resolve a data-file URL against the site base path.
-     relURL leaves leading-slash inputs untouched, which breaks links when the
-     site deploys under a subpath (github.io/open-city-advocates/). Strip the
-     slash so relURL prepends the base; pass external URLs through. */ -}}
-{{- if hasPrefix . "/" -}}{{- relURL (strings.TrimPrefix "/" .) -}}{{- else if hasPrefix . "http" -}}{{- . -}}{{- else -}}{{- relURL . -}}{{- end -}}
