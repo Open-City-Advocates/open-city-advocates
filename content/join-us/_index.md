@@ -10,5 +10,4 @@ Open City Advocates provides holistic legal representation to youth who have bee
 
 ## Open Positions
 
-* [# Legal Fellow (Fall 2027)](/join-us/legal-fellow)
-* [# Staff Attorney](/join-us/staff-attorney)
+* [Legal Intern (Spring 2027)](/join-us/legal-intern)

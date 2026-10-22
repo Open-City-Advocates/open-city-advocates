@@ -126,6 +126,7 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(
-  `Route inventory OK: ${LIVE_URLS.length} live URLs covered (${redirects.size} by redirect), ` +
+  `Route inventory OK: ${LIVE_URLS.length} live URLs covered ` +
+    `(${LIVE_URLS.filter((url) => !builtFile(url)).length} by redirect), ` +
     `${RETIRED.length} retired, ${locations.length} sitemap URLs built.`,
 );
