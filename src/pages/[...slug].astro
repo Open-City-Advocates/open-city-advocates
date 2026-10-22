@@ -4,6 +4,7 @@
 import { render } from "astro:content";
 import Base from "../layouts/Base.astro";
 import {
+  CONTACT,
   byDateDesc,
   findPage,
   isSection,
@@ -87,10 +88,43 @@ const board = (data.board ?? []).map((url) => findPage(all, url)).filter((bio): 
     )}
     <Content />
     {section === "news-updates" && <p class="back-link"><a href="/news-updates">← All news &amp; updates</a></p>}
+    {data.role && data.role !== "Board Member" && (
+      // The Squarespace bios carried a contact form for each staff member; it becomes an email link.
+      <p class="bio-contact"><a class="btn btn-solid" href={`mailto:${CONTACT.email}?subject=${encodeURIComponent(`Message for ${data.title.split(",")[0]}`)}`}>Contact {data.title.split(/[ ,]/)[0]}</a></p>
+    )}
+    {data.role && <p class="back-link"><a href="/our-team">Visit Other Team Bios →</a></p>}
   </article>
 )}
 
-{kind === "list" && (
+{kind === "list" && section === "news-updates" && (
+  <div class="wrap prose news-page">
+    <h1>{data.title}</h1>
+    <Content />
+    <ul class="news-list" role="list">
+      {children.map((post) => (
+        <li class="news-item">
+          {post.data.image && (
+            <a class="news-thumb" href={pageUrl(post)} tabindex="-1" aria-hidden="true">
+              <img src={`/${post.data.image.replace(/^\//, "")}`} alt="" loading="lazy" />
+            </a>
+          )}
+          <div class="news-body">
+            <p class="news-meta">
+              {post.data.author}
+              {post.data.author && post.data.date && " · "}
+              {post.data.date && <time datetime={isoDate(post.data.date)}>{shortDate(post.data.date)}</time>}
+            </p>
+            <h2 class="news-title"><a href={pageUrl(post)}>{post.data.title}</a></h2>
+            {post.data.summary && <p class="news-summary">{post.data.summary}</p>}
+            <a class="news-more" href={pageUrl(post)}>Read More →</a>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
+{kind === "list" && section !== "news-updates" && (
   <div class="wrap prose">
     <h1>{data.title}</h1>
     <Content />

@@ -49,7 +49,7 @@ Each Markdown file under `content/` is one page. The file's path is its address:
 | `content/our-team.md` | `/our-team` (lists staff and board from its front matter) |
 | `content/penelope-spain.md` | `/penelope-spain` (a bio; `role` is the line above the name) |
 | `content/news-updates/_index.md` | `/news-updates` (lists every post in the folder, newest first) |
-| `content/news-updates/<name>.md` | `/news-updates/<name>` (a post; needs `date` and `author`) |
+| `content/news-updates/<name>.md` | `/news-updates/<name>` (a post; needs `date` and `author`; `image` and `summary` fill its card on the News list) |
 | `content/policy-advocacy/<name>.md` | `/policy-advocacy/<name>` (testimony; see an existing file for the fields) |
 | `content/join-us/<name>.md` | `/join-us/<name>` (a job posting) |
 
@@ -61,6 +61,10 @@ misspelled field fails the build instead of being silently ignored.
   reports use this to keep their Squarespace addresses).
 - A policy archive entry with `href:` links to that address (a PDF, or another
   page) instead of getting its own page.
+- Squarespace forms (the Defense Guide's "Request Access" form and the contact
+  form on each staff bio) have no server here. They are email links to
+  `info@opencityadvocates.org` (`CONTACT.email` in `src/lib/site.ts`); change
+  the address there, or in `content/post-disposition-defense-guide.md`.
 
 ## Redirects and the route check
 

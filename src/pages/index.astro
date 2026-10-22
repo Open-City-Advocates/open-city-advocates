@@ -1,7 +1,7 @@
 ---
 import { getEntry, render } from "astro:content";
 import Base from "../layouts/Base.astro";
-import { SITE_DESCRIPTION } from "../lib/site";
+import { DONATE_URL, SITE_DESCRIPTION } from "../lib/site";
 
 // The homepage text lives in content/_index.md.
 const home = await getEntry("pages", "_index");
@@ -10,7 +10,7 @@ const { Content } = await render(home);
 const { mission, vision, description } = home.data;
 ---
 <Base path="/" description={description}>
-<section class="hero" style="background-image: linear-gradient(rgba(45,40,36,.52), rgba(45,40,36,.62)), url('/images/hero.webp');">
+<section class="hero" style="background-image: linear-gradient(rgba(45,40,36,.52), rgba(45,40,36,.62)), url('/images/hero.jpg');">
   <div class="wrap hero-inner">
     <h1 class="hero-title">Mission</h1>
     <p class="hero-mission">{mission || SITE_DESCRIPTION}</p>
@@ -28,6 +28,14 @@ const { mission, vision, description } = home.data;
 <div class="wrap prose home-prose">
   <Content />
 </div>
+
+<section class="home-band" aria-label="Latest news, donate, and the annual report">
+  <div class="wrap band-grid">
+    <a class="band-link" href="/news-updates"><img src="/images/home-latest-news.png" alt="Latest News" width="1000" height="667" loading="lazy" /></a>
+    <a class="band-link" href={DONATE_URL}><img src="/images/home-donate-now.png" alt="Donate Now" width="1000" height="667" loading="lazy" /></a>
+    <a class="band-link" href="/news-updates/our-2025-annual-report"><img src="/images/home-2025-annual-report.png" alt="2025 Annual Report" width="1000" height="667" loading="lazy" /></a>
+  </div>
+</section>
 
 <section class="vision-section">
   <div class="wrap vision-grid">

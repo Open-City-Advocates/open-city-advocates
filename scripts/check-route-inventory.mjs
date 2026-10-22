@@ -25,10 +25,14 @@ const LIVE_URLS = [
   "/news-updates/oca-releases-research-on-expanding-post-disposition-representation-of-youth",
   "/news-updates/the-roots-of-ocas-work",
   "/news-updates/2023/dc-reacts-to-enforcement-of-youth-curfew",
+  "/news-updates/zgehawtif73zd26hxshw0vbj5y71vn",
+  "/news-updates/2016/fusce-rhoncus-vulputate-ex-eget-lacinia-orci-mr5lb",
   "/policy-advocacy",
   "/policy-advocacy/record-sealing",
   "/post-disposition-defense-guide",
   "/a-call-to-expand-post-disposition-representation-of-youth-in-the-juvenile-legal-system",
+  "/s/A-Call-to-Expand-Post-Dispo-Representation.pdf",
+  "/resources",
   "/apply-for-access-to-the-post-disposition-defense-manual",
   "/penelope-spain",
   "/whitney-louchheim",
@@ -52,7 +56,8 @@ const LIVE_URLS = [
   "/sonia-slone",
 ];
 
-// Squarespace template leftovers: these return the 404 page on purpose.
+// Squarespace template leftovers (checked page by page on 2026-10-22: empty pages,
+// "It all begins with an idea" posts, an empty category): these return the 404 page on purpose.
 const RETIRED = [
   "/testing",
   "/new-page-1",
@@ -67,8 +72,6 @@ const RETIRED = [
   "/policy-advocacy/blog-post-title-two-r5dys",
   "/policy-advocacy/blog-post-title-three-9tb8w",
   "/policy-advocacy/blog-post-title-four-hk59s",
-  "/news-updates/2016/fusce-rhoncus-vulputate-ex-eget-lacinia-orci-mr5lb",
-  "/news-updates/zgehawtif73zd26hxshw0vbj5y71vn",
   "/news-updates/category/Category+1",
 ];
 

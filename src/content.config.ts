@@ -24,6 +24,9 @@ const pages = defineCollection({
       // Published date (news posts and the policy archive sort by it).
       date: z.coerce.date().optional(),
       author: z.string().optional(),
+      // News list: the thumbnail (under static/) and the excerpt shown with the title.
+      image: z.string().optional(),
+      summary: z.string().optional(),
       // Team bios: the line shown above the name.
       role: z.string().optional(),
       // true keeps a page out of the build (for example an archived bio).

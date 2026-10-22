@@ -19,3 +19,10 @@
 # Empty page on the live site; the archive is the useful destination.
 /policy-advocacy/record-sealing  /policy-advocacy  301
 /policy-advocacy/record-sealing/  /policy-advocacy  301
+
+# The report PDF's Squarespace address (linked from two pages and cited off-site).
+/s/A-Call-to-Expand-Post-Dispo-Representation.pdf  /A-Call-to-Expand-Post-Dispo-Representation.pdf  301
+
+# The "Resources" menu folder; Squarespace sent it to its first item.
+/resources  /a-call-to-expand-post-disposition-representation-of-youth-in-the-juvenile-legal-system  301
+/resources/  /a-call-to-expand-post-disposition-representation-of-youth-in-the-juvenile-legal-system  301

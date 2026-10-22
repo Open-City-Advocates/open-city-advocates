@@ -43,5 +43,3 @@ Rolling application deadline, with start date in January 2027.
 ### Commitment to Diversity, Equity, Inclusion, and Accessibility
 
 Open City Advocates embraces diversity of identity, experience, ability, and thought, and we are an equal opportunity employer. We are actively striving to create and support diversity, equity, inclusion, and accessibility in our staff, board of directors, client services, systemic reform efforts, and strategic direction. We encourage people of color, LGBTQ+ persons, differently-abled and neurodiverse people, and those with lived experience with the justice system to apply for all positions.
-
-Open City Advocates is a 501(c)(3) organization.
