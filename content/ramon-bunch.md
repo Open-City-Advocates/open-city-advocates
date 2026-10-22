@@ -1,6 +1,6 @@
 ---
 title: "Ramon Bunch"
-role: "Board of Directors"
+role: "Board Member"
 draft: true
 ---
 

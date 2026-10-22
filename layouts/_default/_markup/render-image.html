@@ -1,8 +1,0 @@
-{{- /* Rewrite root-absolute image paths (e.g. /images/foo.jpg) so they carry the baseURL
-       subpath on GitHub Pages. relURL is unreliable for this here, so join against the
-       home permalink, which always includes the subpath. External/relative URLs pass through. */ -}}
-{{- $dest := .Destination -}}
-{{- if strings.HasPrefix $dest "/" -}}
-  {{- $dest = path.Join site.Home.RelPermalink $dest -}}
-{{- end -}}
-<img src="{{ $dest }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy">

@@ -1,0 +1,25 @@
+{
+  // The Worker name here MUST match the Worker name in the Cloudflare dashboard,
+  // or Workers Builds fails before it deploys.
+  "name": "open-city-advocates",
+  "compatibility_date": "2026-10-22",
+
+  // true keeps a *.workers.dev copy of the site for previewing before the
+  // cutover. Once the apex and www custom domains are live, set this to false
+  // (as the YJP site does) so search engines see only one copy.
+  "workers_dev": true,
+
+  // A static-assets-only Worker: there is no script, every request is served
+  // from ./public, the build output.
+  "assets": {
+    "directory": "./public",
+
+    // Astro writes flat files (our-team.html). "auto-trailing-slash" serves
+    // them at /our-team with a 200, the URL style the Squarespace site used,
+    // and redirects /our-team/ and /our-team.html to /our-team.
+    "html_handling": "auto-trailing-slash",
+
+    // Unknown paths get public/404.html with a real 404 status.
+    "not_found_handling": "404-page"
+  }
+}

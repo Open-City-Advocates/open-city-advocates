@@ -2,14 +2,13 @@
 title: "Open City Advocates"
 mission: "Open City Advocates provides youth-centered legal defense and holistic advocacy for young people after sentencing in the DC juvenile justice system and works for systemic improvements to the juvenile justice system, both locally and nationally, to better the lives of marginalized children and youth."
 vision: "Open City Advocates envisions a legal system that is equitable, fair, and compassionate towards children and youth."
-aliases: ["/about-us/"]
 ---
 
 ## Who We Serve
 
 Open City Advocates provides mentoring and legal representation to children and youth in the juvenile justice system after sentencing. We support our clients as they reintegrate into their families and communities after incarceration as we fight for a fair and compassionate justice system.
 
-Open City Advocates serves approximately 60–70 young people annually, ranging from 14–25 years old. Although our services are available to all youth committed to the [DC Department of Youth Rehabilitation Services](https://dyrs.dc.gov/) (DYRS) regardless of race, gender, age, disability, or any other factor, 100% of the youth we serve are youth of color. This is due to the glaring fact that 100% of all children committed to DYRS are children of color: 97% are Black and 3% are Latino, despite Black youth comprising only 58% of the DC youth population.
+Open City Advocates serves approximately 60–70 young people annually, ranging from 14–25 years old. Although Open City Advocates' services are available to all youth committed to the [DC Department of Youth Rehabilitation Services](https://dyrs.dc.gov/) (DYRS) regardless of race, gender, age, disability, or any other factor, 100% of the youth we serve are youth of color. This is due to the glaring fact that 100% of all children committed to DYRS are children of color: 97% are Black and 3% are Latino, despite Black youth comprising only 58% of the DC youth population.
 
 ## Our History
 

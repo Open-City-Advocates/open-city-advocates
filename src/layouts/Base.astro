@@ -1,0 +1,82 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_DESCRIPTION, SITE_TITLE, permalink } from "../lib/site";
+
+interface Props {
+  // Page title; omit on the homepage.
+  title?: string;
+  description?: string;
+  // Site-root path of the page, e.g. "/our-team".
+  path: string;
+  // "article" for single pages, "website" for the homepage and section lists.
+  ogType?: "article" | "website";
+  // Keep the page out of search results (the 404 page).
+  noindex?: boolean;
+}
+
+const { title, description, path, ogType = "website", noindex = false } = Astro.props;
+const fullTitle = title ? `${title} — ${SITE_TITLE}` : SITE_TITLE;
+const desc = description || SITE_DESCRIPTION;
+const canonical = permalink(path);
+const ogImage = permalink("/images/og-image.jpg");
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={desc} />
+  {noindex ? <meta name="robots" content="noindex, nofollow" /> : <link rel="canonical" href={canonical} />}
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta property="og:site_name" content={SITE_TITLE} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={desc} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={desc} />
+  <meta name="twitter:image" content={ogImage} />
+  <!-- Fonts are self-hosted via @font-face in main.css (no third-party dependency). -->
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+  <Header path={path} />
+  <main id="content">
+    <slot />
+  </main>
+  <Footer />
+  <script is:inline>
+    document.querySelector('.nav-toggle')?.addEventListener('click', function () {
+      var open = document.body.classList.toggle('nav-open');
+      this.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Resources (and any) submenu disclosure buttons.
+    document.querySelectorAll('.nav-parent').forEach(function (btn) {
+      var li = btn.closest('.has-children');
+      function close() { li.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+      function open() { li.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+      btn.addEventListener('click', function () {
+        li.classList.contains('open') ? close() : open();
+      });
+      btn.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { close(); btn.focus(); }
+      });
+      li.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { close(); btn.focus(); }
+      });
+      // Click outside closes the open submenu.
+      document.addEventListener('click', function (e) {
+        if (!li.contains(e.target)) close();
+      });
+    });
+  </script>
+</body>
+</html>

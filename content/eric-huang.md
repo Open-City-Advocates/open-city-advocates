@@ -1,6 +1,6 @@
 ---
 title: "Eric Huang"
-role: "Board of Directors"
+role: "Board Member"
 ---
 
 Eric Huang is an executive with GEICO, serving as Chief of Staff to the Head of Staff Counsel, GEICO's in-house legal defense cadre. In this role, Eric helps lead a department of more than 400 attorneys nationwide, and more than a thousand personnel in total, responsible for defending insured customers.

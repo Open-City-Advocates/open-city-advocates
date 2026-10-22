@@ -1,0 +1,23 @@
+{
+  "name": "open-city-advocates",
+  "private": true,
+  "type": "module",
+  "description": "Open City Advocates site \u2014 Astro build deployed to Cloudflare Workers static assets.",
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/check-route-inventory.mjs",
+    "check:routes": "node scripts/check-route-inventory.mjs",
+    "preview": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "astro": "7.2.10",
+    "@astrojs/markdown-satteri": "0.4.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.28.1"
+  }
+}

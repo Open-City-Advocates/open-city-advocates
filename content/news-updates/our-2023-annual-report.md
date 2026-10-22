@@ -2,7 +2,10 @@
 title: "Our 2023 Annual Report"
 date: 2024-03-04
 author: "Joshua Miller"
-aliases: ["/news-updates/our-2024-annual-report/"]
+# Squarespace published this post at the "2024" address; keep it there so old links work.
+url: "/news-updates/our-2024-annual-report"
+image: "images/news-2023-annual-report.jpg"
+summary: "Read all about our work in 2023!"
 ---
 
 Read all about our work in 2023!

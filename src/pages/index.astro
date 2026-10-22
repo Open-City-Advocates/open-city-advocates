@@ -1,0 +1,52 @@
+---
+import { getEntry, render } from "astro:content";
+import Base from "../layouts/Base.astro";
+import { DONATE_URL, SITE_DESCRIPTION } from "../lib/site";
+
+// The homepage text lives in content/_index.md.
+const home = await getEntry("pages", "_index");
+if (!home) throw new Error("content/_index.md is missing");
+const { Content } = await render(home);
+const { mission, vision, description } = home.data;
+---
+<Base path="/" description={description}>
+<section class="hero" style="background-image: linear-gradient(rgba(45,40,36,.52), rgba(45,40,36,.62)), url('/images/hero.jpg');">
+  <div class="wrap hero-inner">
+    <h1 class="hero-title">Mission</h1>
+    <p class="hero-mission">{mission || SITE_DESCRIPTION}</p>
+  </div>
+</section>
+
+<section class="video-section">
+  <div class="wrap">
+    <div class="video-embed">
+      <iframe src="https://www.youtube-nocookie.com/embed/oAz_uYa4SlM" title="20 Years of Open City Advocates" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<div class="wrap prose home-prose">
+  <Content />
+</div>
+
+<section class="home-band" aria-label="Latest news, donate, and the annual report">
+  <div class="wrap band-grid">
+    <a class="band-link" href="/news-updates"><img src="/images/home-latest-news.png" alt="Latest News" width="1000" height="667" loading="lazy" /></a>
+    <a class="band-link" href={DONATE_URL}><img src="/images/home-donate-now.png" alt="Donate Now" width="1000" height="667" loading="lazy" /></a>
+    <a class="band-link" href="/news-updates/our-2025-annual-report"><img src="/images/home-2025-annual-report.png" alt="2025 Annual Report" width="1000" height="667" loading="lazy" /></a>
+  </div>
+</section>
+
+<section class="vision-section">
+  <div class="wrap vision-grid">
+    <div class="vision-text">
+      <h2>Vision</h2>
+      <p>{vision}</p>
+      <a class="btn btn-solid" href="/our-team">Meet The Team →</a>
+    </div>
+    <div class="vision-photo">
+      <img src="/images/team-courtroom.jpeg" alt="The Open City Advocates team" loading="lazy" />
+    </div>
+  </div>
+</section>
+</Base>
