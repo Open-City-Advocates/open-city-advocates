@@ -1,29 +1,18 @@
 ---
 title: "Our Team"
 layout: our-team
-# Staff — photo cards. Order: alphabetical by last name (matches live site).
-# name/role are pulled from each person's bio page; `page` is the bio pageRef,
-# `photo` is the headshot under static/images/.
+# Staff, alphabetical by last name as on the live site. Name and role come from each bio page.
 staff:
-  - page: "/whitney-louchheim"
-    photo: "images/whitney-louchheim.jpg"
-  - page: "/shaliqua-mcknight"
-    photo: "images/shaliqua-mcknight.jpg"
-  - page: "/joshua-miller"
-    photo: "images/joshua-miller.jpg"
-  - page: "/raymond-ngu"
-    photo: "images/raymond-ngu.jpg"
-  - page: "/kristen-powell"
-    photo: "images/kristen-powell.jpg"
-  - page: "/sarah-shor"
-    photo: "images/sarah-shor.jpg"
-  - page: "/sonia-slone"
-    photo: "images/sonia-slone.jpg"
-  - page: "/penelope-spain"
-    photo: "images/penelope-spain.jpg"
-  - page: "/kyla-woods"
-    photo: "images/kyla-woods.jpeg"
-# Board of Directors — name-only linked list (matches live site; no photos).
+  - "/whitney-louchheim"
+  - "/shaliqua-mcknight"
+  - "/joshua-miller"
+  - "/raymond-ngu"
+  - "/kristen-powell"
+  - "/sarah-shor"
+  - "/sonia-slone"
+  - "/penelope-spain"
+  - "/kyla-woods"
+# Board of Directors, names only, as on the live site.
 board:
   - "/robert-barton"
   - "/nick-camillo"

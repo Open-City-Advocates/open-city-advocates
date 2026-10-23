@@ -1,20 +1,24 @@
 ---
-// Every page except the homepage: team bios, news posts, testimony, the
-// section lists (News, Join Us, Policy & Advocacy), and the Our Team page.
+// Every page except the homepage, laid out as the Squarespace site laid it out:
+// news list and posts, team bios, Our Team, the Defense Guide, the report page,
+// the centered Join Us pages, Mission & Values, and the Policy & Advocacy archive.
 import { render } from "astro:content";
 import Base from "../layouts/Base.astro";
+import ContactForm from "../components/ContactForm.astro";
+import RequestAccessForm from "../components/RequestAccessForm.astro";
 import {
-  CONTACT,
   byDateDesc,
   findPage,
   isSection,
   isoDate,
-  longDate,
+  numericDate,
   pageUrl,
   pages,
+  postDate,
   sectionOf,
   sectionPages,
   shortDate,
+  shortName,
   type Page,
 } from "../lib/site";
 
@@ -37,18 +41,42 @@ const data = page.data;
 const path = pageUrl(page);
 const section = sectionOf(page);
 
+const REPORT = "/a-call-to-expand-post-disposition-representation-of-youth-in-the-juvenile-legal-system";
+const GUIDE = "/post-disposition-defense-guide";
+const APPLY = "/apply-for-access-to-the-post-disposition-defense-manual";
+
 const kind = isSection(page)
   ? section === "policy-advocacy"
     ? "policy-list"
-    : "list"
+    : section === "news-updates"
+      ? "news-list"
+      : "narrow"
   : data.layout === "our-team"
     ? "our-team"
     : section === "policy-advocacy"
       ? "policy-single"
-      : "single";
+      : section === "news-updates"
+        ? "post"
+        : data.role
+          ? "bio"
+          : section === "join-us"
+            ? "posting"
+            : path === REPORT
+              ? "report"
+              : path === GUIDE
+                ? "guide"
+                : path === "/missions-and-values"
+                  ? "aside"
+                  : "plain";
 
 // Section lists: newest first.
 const children = isSection(page) ? byDateDesc(sectionPages(all, section)) : [];
+
+// News posts: the newer and older posts, for the links under the post.
+const posts = kind === "post" ? byDateDesc(sectionPages(all, "news-updates")) : [];
+const at = posts.findIndex((post) => post.id === page.id);
+const newer = at > 0 ? posts[at - 1] : undefined;
+const older = at >= 0 && at < posts.length - 1 ? posts[at + 1] : undefined;
 
 // Policy & Advocacy archive: grouped by year, newest year first.
 const years = new Map<string, Page[]>();
@@ -60,98 +88,146 @@ if (kind === "policy-list") {
   }
 }
 
-// Our Team: staff cards and the board list, resolved to their bio pages.
-const staff = (data.staff ?? [])
-  .map((member) => ({ member, bio: findPage(all, member.page) }))
-  .filter((entry) => entry.bio);
+// Our Team: staff and board, resolved to their bio pages.
+const staff = (data.staff ?? []).map((url) => findPage(all, url)).filter((bio): bio is Page => Boolean(bio));
 const board = (data.board ?? []).map((url) => findPage(all, url)).filter((bio): bio is Page => Boolean(bio));
+
+const title = kind === "bio" ? shortName(data.title) : data.title;
+const ogType = isSection(page) ? "website" : "article";
 ---
-<Base title={data.title} description={data.description} path={path} ogType={isSection(page) ? "website" : "article"}>
-{kind === "single" && (
-  <article class="wrap prose article">
-    {section === "news-updates" ? (
-      <>
-        <p class="eyebrow">News &amp; Updates</p>
-        <h1>{data.title}</h1>
-        <p class="post-meta">
-          {data.date && <time datetime={isoDate(data.date)}>{longDate(data.date)}</time>}
-          {data.author && ` · ${data.author}`}
-        </p>
-      </>
-    ) : data.role ? (
-      <>
-        <p class="eyebrow">{data.role}</p>
-        <h1>{data.title}</h1>
-      </>
-    ) : (
-      <h1>{data.title}</h1>
+<Base title={title} description={data.description} path={path} ogType={ogType}>
+{kind === "post" && (
+  <>
+    <article class="post">
+      <h1 class="post-title">{data.title}</h1>
+      {data.date && <time class="post-date" datetime={isoDate(data.date)}>{postDate(data.date)}</time>}
+      <div class="post-body"><Content /></div>
+    </article>
+    {(newer || older) && (
+      <nav class="post-nav" aria-label="More news">
+        {newer && (
+          <a class="prev" href={pageUrl(newer)}>
+            <svg viewBox="0 0 14 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 12l10 10"/></svg>
+            <span>{newer.data.title}</span>
+          </a>
+        )}
+        {older && (
+          <a class="next" href={pageUrl(older)}>
+            <span>{older.data.title}</span>
+            <svg viewBox="0 0 14 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 2l10 10L2 22"/></svg>
+          </a>
+        )}
+      </nav>
     )}
-    <Content />
-    {section === "news-updates" && <p class="back-link"><a href="/news-updates">← All news &amp; updates</a></p>}
-    {data.role && data.role !== "Board Member" && (
-      // The Squarespace bios carried a contact form for each staff member; it becomes an email link.
-      <p class="bio-contact"><a class="btn btn-solid" href={`mailto:${CONTACT.email}?subject=${encodeURIComponent(`Message for ${data.title.split(",")[0]}`)}`}>Contact {data.title.split(/[ ,]/)[0]}</a></p>
+  </>
+)}
+
+{kind === "bio" && (
+  <article class:list={["bio", { "no-photo": !data.photo }]}>
+    <header class="bio-head">
+      <p class="bio-role">{data.role}</p>
+      <h1 class="bio-name">{title}</h1>
+    </header>
+    <div class="bio-text"><Content /></div>
+    {data.photo && (
+      <div class="bio-photo"><img src={`/${data.photo.replace(/^\//, "")}`} alt={title} width="400" height="500" /></div>
     )}
-    {data.role && <p class="back-link"><a href="/our-team">Visit Other Team Bios →</a></p>}
+    {data.role !== "Board Member" && <div class="bio-form"><ContactForm name={title} /></div>}
+    <p class="bio-actions"><a class="btn-solid" href="/our-team">Visit Other Team Bios →</a></p>
   </article>
 )}
 
-{kind === "list" && section === "news-updates" && (
-  <div class="wrap prose news-page">
+{kind === "our-team" && (
+  <div class="team">
     <h1>{data.title}</h1>
-    <Content />
-    <ul class="news-list" role="list">
-      {children.map((post) => (
-        <li class="news-item">
-          {post.data.image && (
-            <a class="news-thumb" href={pageUrl(post)} tabindex="-1" aria-hidden="true">
-              <img src={`/${post.data.image.replace(/^\//, "")}`} alt="" loading="lazy" />
-            </a>
-          )}
-          <div class="news-body">
-            <p class="news-meta">
-              {post.data.author}
-              {post.data.author && post.data.date && " · "}
-              {post.data.date && <time datetime={isoDate(post.data.date)}>{shortDate(post.data.date)}</time>}
-            </p>
-            <h2 class="news-title"><a href={pageUrl(post)}>{post.data.title}</a></h2>
-            {post.data.summary && <p class="news-summary">{post.data.summary}</p>}
-            <a class="news-more" href={pageUrl(post)}>Read More →</a>
-          </div>
-        </li>
+    <ul class="team-list" role="list">
+      {staff.map((bio) => (
+        <li><a href={pageUrl(bio)}>{bio.data.title}{bio.data.role && <> | <em>{bio.data.role}</em></>}</a></li>
       ))}
+    </ul>
+    <h2 id="board-of-directors">Board of Directors</h2>
+    <ul class="team-list" role="list">
+      {board.map((bio) => <li><a href={pageUrl(bio)}>{shortName(bio.data.title)}</a></li>)}
     </ul>
   </div>
 )}
 
-{kind === "list" && section !== "news-updates" && (
-  <div class="wrap prose">
+{kind === "news-list" && (
+  <>
+    <h1 class="sr-only">{data.title}</h1>
+    <ul class="news-list" role="list">
+      {children.map((post) => (
+        <li class="news-item">
+          {post.data.image ? (
+            <a class="news-thumb" href={pageUrl(post)} tabindex="-1" aria-hidden="true">
+              <img src={`/${post.data.image.replace(/^\//, "")}`} alt="" loading="lazy" />
+            </a>
+          ) : <span />}
+          <div class="news-body">
+            {post.data.date && <time class="news-date" datetime={isoDate(post.data.date)}>{numericDate(post.data.date)}</time>}
+            <h2 class="news-title"><a href={pageUrl(post)}>{post.data.title}</a></h2>
+            <a class="news-more" href={pageUrl(post)}>Read More</a>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </>
+)}
+
+{kind === "narrow" && (
+  <div class="narrow">
+    <h1 class="sr-only">{data.title}</h1>
+    <Content />
+  </div>
+)}
+
+{kind === "posting" && (
+  <div class="narrow posting">
+    <h1 class="sr-only">{data.title}</h1>
+    <Content />
+  </div>
+)}
+
+{kind === "aside" && (
+  <div class="aside-page auto">
+    <h1 class="sr-only">{data.title}</h1>
+    <Content />
+  </div>
+)}
+
+{kind === "guide" && (
+  <div class="aside-page">
+    <h1>{data.title}</h1>
+    <div class="aside-body">
+      <Content />
+      <RequestAccessForm />
+    </div>
+  </div>
+)}
+
+{kind === "report" && (
+  <div class="report">
+    <h1>{data.title}</h1>
+    <div class="report-body"><Content /></div>
+  </div>
+)}
+
+{kind === "plain" && (
+  <div class="plain">
     <h1>{data.title}</h1>
     <Content />
-    {children.length > 0 && (
-      <ul class="post-list">
-        {children.map((child) => (
-          <li class="post-list-item">
-            <a class="post-list-link" href={pageUrl(child)}>{child.data.title}</a>
-            {child.data.date && <span class="post-list-date">{shortDate(child.data.date)}</span>}
-          </li>
-        ))}
-      </ul>
-    )}
+    {path === APPLY && <RequestAccessForm />}
   </div>
 )}
 
 {kind === "policy-list" && (
   <>
     <section class="archive-hero">
-      <div class="wrap">
-        <p class="eyebrow">Policy &amp; Advocacy</p>
-        <h1>{data.title}</h1>
-        {page.body?.trim() && <div class="lede"><Content /></div>}
-      </div>
+      <h1>{data.title}</h1>
+      {page.body?.trim() && <div class="lede"><Content /></div>}
     </section>
 
-    <div class="wrap archive">
+    <div class="archive">
       {[...years].map(([year, docs]) => (
         <section class="year-group">
           <div class="year-head">
@@ -171,7 +247,7 @@ const board = (data.board ?? []).map((url) => findPage(all, url)).filter((bio): 
                 {doc.data.by && <div class="dby">{doc.data.by}</div>}
                 <div class="dtags"><span class="dtag type">{doc.data.doctype}</span>{doc.data.tags.map((tag) => <span class="dtag">{tag}</span>)}</div>
               </div>
-              <div class="dgo">Read <span class="arw">&rarr;</span></div>
+              <div class="dgo">Read &rarr;</div>
             </a>
           ))}
         </section>
@@ -181,7 +257,7 @@ const board = (data.board ?? []).map((url) => findPage(all, url)).filter((bio): 
 )}
 
 {kind === "policy-single" && (
-  <article class="wrap prose document">
+  <article class="document">
     <p class="eyebrow">{data.doctype}{data.docdate && ` · ${data.docdate}`}</p>
     <h1>{data.title}</h1>
     {data.by && <p class="doc-by">{data.by}</p>}
@@ -191,37 +267,8 @@ const board = (data.board ?? []).map((url) => findPage(all, url)).filter((bio): 
 
     <div class="cite-note">
       <p>Free to quote and share with attribution.</p>
-      <p><a href="/policy-advocacy">&larr; Back to Policy &amp; Advocacy</a></p>
+      <p class="back-link"><a href="/policy-advocacy">&larr; Back to Policy &amp; Advocacy</a></p>
     </div>
   </article>
-)}
-
-{kind === "our-team" && (
-  <div class="wrap team-page">
-    <h1>{data.title}</h1>
-
-    {staff.length > 0 && (
-      <ul class="team-grid" role="list">
-        {staff.map(({ member, bio }) => (
-          <li class="team-card">
-            <a class="team-card-link" href={pageUrl(bio!)}>
-              {member.photo && <img class="team-card-photo" src={`/${member.photo.replace(/^\//, "")}`} alt={bio!.data.title} width="400" height="400" loading="lazy" />}
-              <span class="team-card-name">{bio!.data.title}</span>
-            </a>
-            {bio!.data.role && <span class="team-card-role">{bio!.data.role}</span>}
-          </li>
-        ))}
-      </ul>
-    )}
-
-    {board.length > 0 && (
-      <>
-        <h2 id="board-of-directors">Board of Directors</h2>
-        <ul class="board-grid" role="list">
-          {board.map((bio) => <li class="board-item"><a href={pageUrl(bio)}>{bio.data.title.split(",")[0]}</a></li>)}
-        </ul>
-      </>
-    )}
-  </div>
 )}
 </Base>

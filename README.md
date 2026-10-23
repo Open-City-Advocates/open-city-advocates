@@ -6,7 +6,11 @@ the same setup as the [Youth Justice Project site](https://github.com/Open-City-
 
 The site was ported to Hugo in July 2026 and moved to Astro in October 2026.
 Page addresses match the Squarespace site (`/our-team`, no extension or
-trailing slash), so links people have saved keep working.
+trailing slash), so links people have saved keep working. The layout, type
+and colors reproduce the Squarespace site as measured on 2026-10-22
+(`static/css/main.css` carries the numbers): Cormorant Garamond headings and
+nav, Nunito Sans text, Fjalla One post titles, 2.6vw gutters, the two-column
+pages, the brown footer with yellow links.
 
 ## Project layout
 
@@ -16,7 +20,7 @@ open-city-advocates/
 ├─ content/                      # every page, as Markdown (see below)
 ├─ src/
 │  ├─ layouts/Base.astro         # page skeleton and <head> (title, description, social cards)
-│  ├─ components/                # Header (nav) and Footer
+│  ├─ components/                # Header (nav), Footer, and the two forms (ContactForm, RequestAccessForm)
 │  ├─ pages/index.astro          # the homepage layout
 │  ├─ pages/[...slug].astro      # every other page: bios, news, testimony, lists, Our Team
 │  ├─ lib/site.ts                # menu, contact details, Neon links, URL helpers
@@ -46,8 +50,8 @@ Each Markdown file under `content/` is one page. The file's path is its address:
 | File | Address |
 |---|---|
 | `content/_index.md` | `/` (homepage text, plus `mission` and `vision` in the front matter) |
-| `content/our-team.md` | `/our-team` (lists staff and board from its front matter) |
-| `content/penelope-spain.md` | `/penelope-spain` (a bio; `role` is the line above the name) |
+| `content/our-team.md` | `/our-team` (lists the `staff` and `board` bio pages named in its front matter) |
+| `content/penelope-spain.md` | `/penelope-spain` (a bio; `role` is the line above the name, `photo` the headshot; staff bios get a contact form, board bios do not) |
 | `content/news-updates/_index.md` | `/news-updates` (lists every post in the folder, newest first) |
 | `content/news-updates/<name>.md` | `/news-updates/<name>` (a post; needs `date` and `author`; `image` and `summary` fill its card on the News list) |
 | `content/policy-advocacy/<name>.md` | `/policy-advocacy/<name>` (testimony; see an existing file for the fields) |
@@ -62,9 +66,9 @@ misspelled field fails the build instead of being silently ignored.
 - A policy archive entry with `href:` links to that address (a PDF, or another
   page) instead of getting its own page.
 - Squarespace forms (the Defense Guide's "Request Access" form and the contact
-  form on each staff bio) have no server here. They are email links to
-  `info@opencityadvocates.org` (`CONTACT.email` in `src/lib/site.ts`); change
-  the address there, or in `content/post-disposition-defense-guide.md`.
+  form on each staff bio) have no server here. They look as they did, but
+  submitting opens the visitor's email app with the fields addressed to
+  `CONTACT.email` in `src/lib/site.ts`; change the address there.
 
 ## Redirects and the route check
 

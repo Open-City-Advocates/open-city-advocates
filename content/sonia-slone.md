@@ -1,9 +1,8 @@
 ---
 title: "Sonia Slone, MBA"
 role: "Operations & Finance Specialist"
+photo: "images/sonia-slone.jpg"
 ---
-
-![Sonia Slone, MBA](/images/sonia-slone.jpg)
 
 Sonia joins Open City Advocates from The Gault Center (formerly the National Juvenile Defender Center) where she developed expertise in both juvenile justice and operations management. She has over 15 years of nonprofit management, finance, and operations experience. She has served in a wide range of leadership and management positions, in various nonprofit fields, including education, criminal justice and environmental justice. She also has experience managing the financial and operations departments of various corporations including HBO Latin America Group, La Perla, and Aviation Sales.
 

@@ -27,8 +27,9 @@ const pages = defineCollection({
       // News list: the thumbnail (under static/) and the excerpt shown with the title.
       image: z.string().optional(),
       summary: z.string().optional(),
-      // Team bios: the line shown above the name.
+      // Team bios: the line shown above the name, and the headshot (under static/).
       role: z.string().optional(),
+      photo: z.string().optional(),
       // true keeps a page out of the build (for example an archived bio).
       draft: z.boolean().default(false),
       // Publish at this path instead of the one the file name gives.
@@ -38,7 +39,7 @@ const pages = defineCollection({
       vision: z.string().optional(),
       // Our Team page.
       layout: z.string().optional(),
-      staff: z.array(z.object({ page: z.string(), photo: z.string().optional() })).optional(),
+      staff: z.array(z.string()).optional(),
       board: z.array(z.string()).optional(),
       // Policy & Advocacy archive.
       docdate: z.string().optional(),

@@ -1,0 +1,37 @@
+---
+// The "Request Access" form on the Defense Guide page of the Squarespace site.
+// There is no form server here: on submit, the browser's email app opens with
+// the request addressed to CONTACT.email (see Base.astro).
+import { CONTACT } from "../lib/site";
+---
+<hr />
+<form class="sq-form" method="post" action={`mailto:${CONTACT.email}`} data-mailto={CONTACT.email} data-subject="Request Access: Post-Disposition Defense Manual">
+  <fieldset class="field" style="border:0;padding:0;margin:0 0 20px">
+    <legend class="title">I am a youth defender.</legend>
+    <label class="option"><input type="checkbox" name="Youth defender" value="I affirm that I am a youth defender." required /> I affirm that I am a youth defender.</label>
+  </fieldset>
+  <div class="field">
+    <span class="title">Name</span>
+    <div class="name-row">
+      <div>
+        <label class="caption" for="ra-first">First Name <span class="required">(required)</span></label>
+        <input type="text" id="ra-first" name="First Name" required autocomplete="given-name" />
+      </div>
+      <div>
+        <label class="caption" for="ra-last">Last Name <span class="required">(required)</span></label>
+        <input type="text" id="ra-last" name="Last Name" required autocomplete="family-name" />
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label class="title" for="ra-org">Organization</label>
+    <input type="text" id="ra-org" name="Organization" autocomplete="organization" />
+  </div>
+  <div class="field">
+    <label class="title" for="ra-email">Email <span class="required">(required)</span></label>
+    <input type="email" id="ra-email" name="Email" required autocomplete="email" />
+  </div>
+  <label class="option"><input type="checkbox" name="Sign up for news and updates" value="Yes" /> Sign up for news and updates</label>
+  <div class="submit-row right"><button class="submit" type="submit">Submit</button></div>
+  <p class="form-note">Submitting opens your email app with the request addressed to {CONTACT.email}.</p>
+</form>

@@ -10,43 +10,34 @@ const { Content } = await render(home);
 const { mission, vision, description } = home.data;
 ---
 <Base path="/" description={description}>
-<section class="hero" style="background-image: linear-gradient(rgba(45,40,36,.52), rgba(45,40,36,.62)), url('/images/hero.jpg');">
-  <div class="wrap hero-inner">
-    <h1 class="hero-title">Mission</h1>
+<section class="hero" style="background-image: url('/images/hero.jpg');">
+  <div class="hero-inner">
+    <h1>Mission</h1>
     <p class="hero-mission">{mission || SITE_DESCRIPTION}</p>
   </div>
 </section>
 
-<section class="video-section">
-  <div class="wrap">
-    <div class="video-embed">
-      <iframe src="https://www.youtube-nocookie.com/embed/oAz_uYa4SlM" title="20 Years of Open City Advocates" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-    </div>
+<section class="home-cols">
+  <div class="home-prose">
+    <Content />
+  </div>
+  <div class="home-video">
+    <iframe src="https://www.youtube-nocookie.com/embed/oAz_uYa4SlM" title="20 Years of Open City Advocates" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
   </div>
 </section>
 
-<div class="wrap prose home-prose">
-  <Content />
-</div>
+<nav class="home-band" aria-label="Latest news, donate, and the annual report">
+  <a class="band-link" href="/news-updates"><img src="/images/home-latest-news.png" alt="Latest News" width="1000" height="667" loading="lazy" /></a>
+  <a class="band-link" href={DONATE_URL} target="_blank" rel="noopener"><img src="/images/home-donate-now.png" alt="Donate Now" width="1000" height="667" loading="lazy" /></a>
+  <a class="band-link" href="/news-updates/our-2025-annual-report"><img src="/images/home-2025-annual-report.png" alt="2025 Annual Report" width="1000" height="667" loading="lazy" /></a>
+</nav>
 
-<section class="home-band" aria-label="Latest news, donate, and the annual report">
-  <div class="wrap band-grid">
-    <a class="band-link" href="/news-updates"><img src="/images/home-latest-news.png" alt="Latest News" width="1000" height="667" loading="lazy" /></a>
-    <a class="band-link" href={DONATE_URL}><img src="/images/home-donate-now.png" alt="Donate Now" width="1000" height="667" loading="lazy" /></a>
-    <a class="band-link" href="/news-updates/our-2025-annual-report"><img src="/images/home-2025-annual-report.png" alt="2025 Annual Report" width="1000" height="667" loading="lazy" /></a>
+<section class="vision">
+  <div>
+    <h2>Vision</h2>
+    <p>{vision}</p>
+    <a class="btn-outline" href="/our-team">Meet The Team →</a>
   </div>
-</section>
-
-<section class="vision-section">
-  <div class="wrap vision-grid">
-    <div class="vision-text">
-      <h2>Vision</h2>
-      <p>{vision}</p>
-      <a class="btn btn-solid" href="/our-team">Meet The Team →</a>
-    </div>
-    <div class="vision-photo">
-      <img src="/images/team-courtroom.jpeg" alt="The Open City Advocates team" loading="lazy" />
-    </div>
-  </div>
+  <img src="/images/team-courtroom.jpeg" alt="The Open City Advocates team" width="2048" height="1536" loading="lazy" />
 </section>
 </Base>

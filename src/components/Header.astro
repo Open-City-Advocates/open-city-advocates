@@ -1,36 +1,36 @@
 ---
-import { DONATE_URL, MENU, SUBSCRIBE_URL } from "../lib/site";
+import { MENU, activeMenuName } from "../lib/site";
 
 interface Props {
-  // The current page's path, to mark its menu item active.
+  // The current page's path, to underline its menu item.
   path: string;
 }
 
 const { path } = Astro.props;
+const active = activeMenuName(path);
 const submenuId = (name: string) => `submenu-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+const external = (url: string) => url.startsWith("http");
 ---
 <header class="site-header">
-  <div class="wrap header-inner">
+  <div class="header-inner">
     <a class="brand" href="/" aria-label="Open City Advocates — home">
-      <img src="/images/logo.png" alt="Open City Advocates" width="253" height="50" />
+      <img src="/images/logo.png" alt="Open City Advocates" width="202" height="40" />
     </a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
-    <nav class="site-nav" aria-label="Primary">
+    <button class="burger" aria-label="Open Menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
       <ul class="nav-list">
         {MENU.map((item) =>
           item.children ? (
             <li class="has-children">
-              <button type="button" class="nav-parent" aria-expanded="false" aria-controls={submenuId(item.name)}>{item.name}</button>
+              <button type="button" class:list={["nav-parent", { active: active === item.name }]} aria-expanded="false" aria-controls={submenuId(item.name)}>{item.name}</button>
               <ul class="submenu" id={submenuId(item.name)}>
                 {item.children.map((child) => <li><a href={child.url}>{child.name}</a></li>)}
               </ul>
             </li>
           ) : (
-            <li><a href={item.url} class={item.url === path ? "active" : undefined}>{item.name}</a></li>
+            <li><a href={item.url} class={active === item.name ? "active" : undefined} target={external(item.url!) ? "_blank" : undefined} rel={external(item.url!) ? "noopener" : undefined}>{item.name}</a></li>
           )
         )}
-        <li><a href={SUBSCRIBE_URL}>Subscribe</a></li>
-        <li><a class="nav-donate" href={DONATE_URL}>Donate</a></li>
       </ul>
     </nav>
   </div>

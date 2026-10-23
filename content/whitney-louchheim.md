@@ -1,9 +1,8 @@
 ---
 title: "Whitney Louchheim, Esq."
 role: "Co-Founder & Chief Operating Officer"
+photo: "images/whitney-louchheim.jpg"
 ---
-
-![Whitney Louchheim, Esq.](/images/whitney-louchheim.jpg)
 
 Whitney Louchheim is Co-Founder and Chief Operating Officer of Open City Advocates. She is a passionate advocate for the rights and well-being of youth trapped in the deepest end of the juvenile legal system. As a defense attorney, she works every day with youth struggling to navigate the complexities of the justice system or who yearn to return home from incarceration to be with family and friends. After graduating from Wesleyan University, Whitney entered American University Washington College of Law, where she developed a commitment to this work.  As a law clerk in DC Superior Court during her first summer, Whitney was horrified to see a small child, shackled and scared, standing alone in juvenile court – a scene she saw repeatedly over the course of the summer. She began to comprehend the persistent racial injustice and the violence and poverty that so many DC children must overcome. During her second year in law school, Whitney joined her friend and classmate, Penelope Spain, in mentoring incarcerated youth at Oak Hill, DC's juvenile facility, where youth were exposed to rampant violence and appalling living conditions.
 
