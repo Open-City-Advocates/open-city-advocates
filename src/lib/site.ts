@@ -15,7 +15,7 @@ export const CONTACT = {
 export const SUBSCRIBE_URL = "https://opencityadvocates.app.neoncrm.com/subscribe.jsp";
 export const DONATE_URL = "https://opencityadvocates.app.neoncrm.com/forms/donation-form";
 
-// Main navigation. An item with `children` is a dropdown.
+// Main navigation, in the live site's order. An item with `children` is a dropdown folder.
 export interface MenuItem {
   name: string;
   url?: string;
@@ -24,26 +24,50 @@ export interface MenuItem {
 
 export const MENU: MenuItem[] = [
   { name: "About Us", url: "/" },
-  {
-    name: "Our Team",
-    children: [
-      { name: "Meet the Team", url: "/our-team" },
-      { name: "Join Us", url: "/join-us" },
-    ],
-  },
+  { name: "Our Team", url: "/our-team" },
   { name: "News", url: "/news-updates" },
   {
     name: "Resources",
     children: [
-      { name: "Post-Disposition Defense Guide", url: "/post-disposition-defense-guide" },
       {
-        name: "A Call to Expand Post-Disposition Representation",
+        name: "A Call to Expand Post-Disposition Representation of Youth in the Juvenile Legal System",
         url: "/a-call-to-expand-post-disposition-representation-of-youth-in-the-juvenile-legal-system",
       },
+      { name: "Post-Disposition Defense Guide", url: "/post-disposition-defense-guide" },
       { name: "Policy & Advocacy", url: "/policy-advocacy" },
     ],
   },
+  { name: "Subscribe", url: SUBSCRIBE_URL },
+  { name: "Join Us", url: "/join-us" },
+  { name: "Donate", url: DONATE_URL },
 ];
+
+// Which top-level menu item a page belongs to (underlined in the header).
+export function activeMenuName(path: string): string | undefined {
+  for (const item of MENU) {
+    if (item.url === path) return item.name;
+    if (item.children?.some((child) => child.url === path || path.startsWith(child.url + "/"))) return item.name;
+  }
+  if (path.startsWith("/news-updates")) return "News";
+  if (path.startsWith("/join-us")) return "Join Us";
+  if (path.startsWith("/policy-advocacy")) return "Resources";
+  return undefined;
+}
+
+// Bio titles carry credentials for the team list ("Penelope Spain, Esq."); the bio page shows the name alone.
+export function shortName(title: string): string {
+  return title.split(",")[0].trim();
+}
+
+// "12/18/25", as the news list prints dates.
+export function numericDate(date: Date): string {
+  return `${date.getUTCMonth() + 1}/${date.getUTCDate()}/${String(date.getUTCFullYear()).slice(-2)}`;
+}
+
+// "DEC 18", as a news post prints its date.
+export function postDate(date: Date): string {
+  return date.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).toUpperCase();
+}
 
 export type Page = CollectionEntry<"pages">;
 

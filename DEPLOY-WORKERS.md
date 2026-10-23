@@ -94,8 +94,9 @@ available until the plan is canceled in January.
 ## What the Worker cannot replace
 
 Squarespace hosted two kinds of forms: "Request Access" on the Defense Guide
-page and a contact form on each staff bio. The static site turns them into
-`mailto:` links to `info@opencityadvocates.org` (see README.md). The homepage
+page and a contact form on each staff bio. The static site shows the same
+forms, but submitting one opens the visitor's email app with the fields
+addressed to `info@opencityadvocates.org` (see README.md). The homepage
 video was a Squarespace-hosted MP4; the site embeds OCA's YouTube upload of the
 same film, "20 Years of Open City Advocates", instead. Everything else on the
 Squarespace site (every page in its sitemap, every image, PDF and embed) is
