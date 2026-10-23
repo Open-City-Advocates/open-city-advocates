@@ -262,7 +262,7 @@ iframe { max-width: 100%; }
   .nav-list { flex-direction: column; align-items: flex-start; gap: 14px; }
   .nav-list a, .nav-parent { font-size: 20px; }
   .submenu { position: static; display: block; box-shadow: none; padding: 8px 0 0 18px; margin: 0; min-width: 0; }
-  .submenu a { font-size: 16px; }
+  .submenu a { font-size: 16px; white-space: normal; line-height: 1.3; }
   .home-cols, .vision, .footer-inner, .team, .aside-page, .report-body { grid-template-columns: 1fr; }
   .bio { grid-template-columns: 1fr; }
   .bio-head, .bio-text, .bio-form, .bio-actions, .bio-photo { grid-column: 1; grid-row: auto; }
