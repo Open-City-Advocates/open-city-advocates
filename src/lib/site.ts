@@ -64,9 +64,9 @@ export function numericDate(date: Date): string {
   return `${date.getUTCMonth() + 1}/${date.getUTCDate()}/${String(date.getUTCFullYear()).slice(-2)}`;
 }
 
-// "DEC 18", as a news post prints its date.
+// "DEC 18, 2025", as a news post prints its date.
 export function postDate(date: Date): string {
-  return date.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).toUpperCase();
+  return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).toUpperCase();
 }
 
 export type Page = CollectionEntry<"pages">;
