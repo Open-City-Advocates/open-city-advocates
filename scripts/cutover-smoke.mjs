@@ -32,8 +32,13 @@ async function get(url, redirect = "follow") {
 
 // A page must load at its own address: a redirect elsewhere (say, every path to
 // the homepage) is a failure, not a pass.
+// The page's canonical tag must name the same path, so a rewrite serving the
+// homepage (or any other page) at this address fails too.
+const trim = (p) => p.replace(/\/$/, "");
+const canonical = (body) => body.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
 const landedAt = (res, path) => res.url && new URL(res.url).origin === new URL(base).origin
-  && new URL(res.url).pathname.replace(/\/$/, "") === path.replace(/\/$/, "");
+  && trim(new URL(res.url).pathname) === trim(path)
+  && canonical(res.body) !== undefined && trim(new URL(canonical(res.body)).pathname) === trim(path);
 
 async function page(path, label = path) {
   const res = await get(base + path);
