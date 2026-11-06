@@ -60,6 +60,9 @@ const ogImage = permalink("/images/og-image.jpg");
       this.setAttribute('aria-expanded', open ? 'true' : 'false');
       this.setAttribute('aria-label', open ? 'Close Menu' : 'Open Menu');
     });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && document.body.classList.contains('nav-open')) { burger.click(); burger.focus(); }
+    });
 
     // Resources folder: click or keyboard opens it (hover works through CSS).
     document.querySelectorAll('.nav-parent').forEach(function (btn) {

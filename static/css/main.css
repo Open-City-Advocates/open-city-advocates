@@ -13,9 +13,9 @@
 :root {
   /* The Squarespace palette, as site.css defines it */
   --brown: #4f4540;    /* "black": hsl(21,10%,28%) — text, footer, header text */
-  --grey: #7f7770;     /* "lightAccent": hsl(28,6%,47%) */
+  --grey: #7c746d;     /* "lightAccent" hsl(28,6%,47%), darkened a step to reach 4.5:1 on white */
   --orange: #c5521f;   /* "darkAccent": hsl(18,72%,45%) — links, solid buttons */
-  --yellow: #fdb51c;   /* "accent": hsl(41,98%,55%) — footer links, Join Us headings */
+  --yellow: #fdb51c;   /* "accent": hsl(41,98%,55%) — footer links on brown; too light for text on white */
   --rule: #d3d3d3;
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Nunito Sans", "Helvetica Neue", Arial, sans-serif;
@@ -79,6 +79,8 @@ iframe { max-width: 100%; }
 
 /* Homepage */
 .hero { position: relative; min-height: 40.7vw; display: flex; align-items: center; padding: 6vw var(--gutter); background: var(--brown) center/cover no-repeat; color: #fff; }
+.hero::before { content: ""; position: absolute; inset: 0; backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); } /* as Squarespace did, so the mission reads over the photo */
+.hero-inner { position: relative; }
 .hero h1 { color: #fff; margin: 0 0 34px; }
 .hero-mission { font-family: var(--serif); font-size: var(--h2); line-height: 1.254; letter-spacing: .01em; color: #fff; margin: 0; }
 .home-cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--col); align-items: start; padding: 42px var(--gutter) 72px; }
@@ -129,7 +131,7 @@ iframe { max-width: 100%; }
 
 /* Centered 910px column (Join Us, postings) */
 .narrow { max-width: 910px; margin: 0 auto; padding: 42px var(--gutter) 64px; }
-.narrow h2 { font-size: var(--h1); line-height: 1.187; font-weight: 700; text-align: center; color: var(--yellow); margin: 0 0 34px; }
+.narrow h2 { font-size: var(--h1); line-height: 1.187; font-weight: 700; text-align: center; color: var(--orange); margin: 0 0 34px; }
 .narrow h2:not(:first-child) { margin-top: 34px; }
 .narrow ul.positions, .narrow > ul { list-style: none; padding: 64px; margin: 0; text-align: center; }
 .narrow > ul li { margin: 0; }
@@ -137,7 +139,7 @@ iframe { max-width: 100%; }
 .narrow > ul li a:hover { text-decoration: underline; }
 .posting { padding-top: 85px; }
 .posting h2 { color: var(--orange); }
-.posting h3 { font-size: var(--h2); line-height: 1.254; font-weight: 700; text-align: center; color: var(--yellow); margin: 34px 0; }
+.posting h3 { font-size: var(--h2); line-height: 1.254; font-weight: 700; text-align: center; color: var(--orange); margin: 34px 0; }
 .posting ul { list-style: disc; padding: 0 0 0 40px; margin: 17px 0; text-align: left; }
 .posting ul li { margin: 8.5px 0; }
 .posting ul li a { display: inline; font: inherit; color: var(--orange); text-decoration: underline; padding: 0; }
@@ -244,7 +246,7 @@ iframe { max-width: 100%; }
 .dtag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 3px 9px; border: 1px solid var(--rule); color: var(--grey); }
 .dtag.type { background: var(--orange); color: #fff; border-color: var(--orange); }
 .dgo { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--orange); white-space: nowrap; align-self: center; }
-.document { padding: 85px var(--gutter) 64px; max-width: 910px; }
+.document { padding: 85px var(--gutter) 64px; max-width: 910px; overflow-wrap: break-word; } /* long source URLs wrap on phones */
 .document .eyebrow { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 17px; }
 .document .doc-by { margin: -17px 0 17px; color: var(--grey); }
 .document .dtags { margin: 0 0 34px; }
