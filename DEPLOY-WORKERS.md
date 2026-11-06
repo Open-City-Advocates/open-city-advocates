@@ -1,6 +1,6 @@
 # Cloudflare Workers deployment
 
-**Status (October 2026): not live yet.** The site deploys to the Worker's
+**Status (November 2026): not live yet.** The site deploys to the Worker's
 workers.dev address for review. The domain still serves Squarespace until the
 cutover (planned for Tuesday, Nov 17, 2026).
 
@@ -51,10 +51,17 @@ Check all of this locally with `npm run build && npm run preview`.
 
 ## Before the cutover: move DNS to Cloudflare
 
-Checked 2026-10-22: `opencityadvocates.org` is **not** on Cloudflare. Its
-nameservers are `ns1/ns2.greengeeks.net`; `www` is a CNAME to
-`ext-cust.squarespace.com` and the apex points at Squarespace's four A records.
-Custom Domains on a Worker need the zone on Cloudflare, so this comes first:
+**Done 2026-11-02.** The registrar (eNom) now delegates to
+`elmo/gigi.ns.cloudflare.com`. Checked 2026-11-06: Cloudflare answers with
+every record GreenGeeks had (Google MX, SPF, DMARC, the `google` DKIM key, the
+cPanel mail hosts and SRV records), plus the Anthropic verification TXT, and
+the apex and `www` still point at Squarespace, DNS-only. The steps are kept
+below for reference.
+
+On 2026-10-22 the nameservers were `ns1/ns2.greengeeks.net`; `www` was a CNAME
+to `ext-cust.squarespace.com` and the apex pointed at Squarespace's four A
+records. Custom Domains on a Worker need the zone on Cloudflare, so this came
+first:
 
 1. In the Cloudflare dashboard (the account `wrangler whoami` shows), add
    `opencityadvocates.org` as a site (Free plan is enough). Cloudflare scans
@@ -81,9 +88,12 @@ With the zone active on Cloudflare and the Squarespace records still in place:
    Redirect Rule (Rules → Redirect Rules) sending the apex to
    `https://www.opencityadvocates.org` with the path kept, as a 301. The live
    site's canonical address is `www`.
-3. Smoke-test: the homepage, `/our-team`, a bio, a news post, a testimony,
-   `/about-us` (redirects home), Donate and Subscribe (Neon), the PDFs, and an
-   unknown address (404 page).
+3. Smoke-test: `node scripts/cutover-smoke.mjs`. It checks that the Worker
+   (not Squarespace) answers, the homepage, `/our-team`, a bio, a news post, a
+   testimony, `/about-us` (redirects home), every sitemap page, Donate and
+   Subscribe (Neon), the PDFs, an unknown address (404 page), and the apex and
+   `http://` redirects. Run it with the workers.dev address first to see it
+   pass; before the cutover the live domain fails the Worker checks.
 4. Once the domains are live and checked, set `"workers_dev": false` in
    `wrangler.jsonc` so only one copy of the site is public.
 
