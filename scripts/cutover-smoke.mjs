@@ -30,9 +30,15 @@ async function get(url, redirect = "follow") {
   }
 }
 
+// A page must load at its own address: a redirect elsewhere (say, every path to
+// the homepage) is a failure, not a pass.
+const landedAt = (res, path) => res.url && new URL(res.url).origin === new URL(base).origin
+  && new URL(res.url).pathname.replace(/\/$/, "") === path.replace(/\/$/, "");
+
 async function page(path, label = path) {
   const res = await get(base + path);
-  check(res.status === 200 && res.type.startsWith("text/html"), `${label} serves a page`, res.error ?? `${res.status} ${res.type}`);
+  check(res.status === 200 && res.type.startsWith("text/html") && landedAt(res, path), `${label} serves a page`,
+        res.error ?? `${res.status} ${res.type} at ${res.url}`);
   return res;
 }
 
@@ -46,6 +52,8 @@ async function redirects(from, to, label) {
 const home = await page("/", "homepage");
 if (isLiveDomain) check(/cloudflare/i.test(home.server), "the Worker answers, not Squarespace", `server: ${home.server}`);
 check(home.body.includes("/css/main.css"), "homepage is the Astro build");
+const css = await get(base + "/css/main.css");
+check(css.status === 200 && css.type.includes("css") && css.body.includes(".hero"), "stylesheet loads", css.error ?? `${css.status} ${css.type}`);
 await page("/our-team");
 await page("/penelope-spain", "a bio");
 await page("/news-updates/our-2025-annual-report", "a news post");
@@ -59,7 +67,7 @@ check(locs.length > 40, "sitemap lists the site", `${locs.length} pages`);
 const bad = [];
 for (const path of locs) {
   const res = await get(base + path);
-  if (res.status !== 200) bad.push(`${path} ${res.status}`);
+  if (res.status !== 200 || !landedAt(res, path)) bad.push(`${path} ${res.status} at ${res.url}`);
 }
 check(bad.length === 0, `all ${locs.length} sitemap pages load`, bad.join(", "));
 
