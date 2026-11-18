@@ -1,6 +1,7 @@
 ---
 title: "Joshua Miller, PhD"
 role: "Research & Advocacy Director"
+email: "joshua@opencityadvocates.org"
 photo: "images/joshua-miller.jpg"
 ---
 

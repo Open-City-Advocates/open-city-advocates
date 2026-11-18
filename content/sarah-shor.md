@@ -1,6 +1,7 @@
 ---
 title: "Sarah Shor, Esq., LGSW"
 role: "Staff Attorney"
+email: "sarah@opencityadvocates.org"
 photo: "images/sarah-shor.jpg"
 ---
 

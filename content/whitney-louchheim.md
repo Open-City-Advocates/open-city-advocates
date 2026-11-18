@@ -1,6 +1,7 @@
 ---
 title: "Whitney Louchheim, Esq."
 role: "Co-Founder & Chief Operating Officer"
+email: "whitney@opencityadvocates.org"
 photo: "images/whitney-louchheim.jpg"
 ---
 

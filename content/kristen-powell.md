@@ -1,6 +1,7 @@
 ---
 title: "Kristen Powell, Esq."
 role: "Staff Attorney"
+email: "kristen@opencityadvocates.org"
 photo: "images/kristen-powell.jpg"
 ---
 

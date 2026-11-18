@@ -7,7 +7,6 @@ import Base from "../layouts/Base.astro";
 import RequestAccessForm from "../components/RequestAccessForm.astro";
 import {
   byDateDesc,
-  CONTACT,
   findPage,
   isSection,
   isoDate,
@@ -132,8 +131,8 @@ const ogType = isSection(page) ? "website" : "article";
     {data.photo && (
       <div class="bio-photo"><img src={`/${data.photo.replace(/^\//, "")}`} alt={title} width="400" height="500" /></div>
     )}
-    {data.role !== "Board Member" && (
-      <p class="bio-contact">To reach {title}, email <a href={`mailto:${CONTACT.email}?subject=${encodeURIComponent(`Message for ${title}`)}`}>{CONTACT.email}</a>.</p>
+    {data.email && (
+      <p class="bio-contact">To reach {title}, email <a href={`mailto:${data.email}`}>{data.email}</a>.</p>
     )}
     <p class="bio-actions"><a class="btn-solid" href="/our-team">Visit Other Team Bios →</a></p>
   </article>

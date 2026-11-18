@@ -1,6 +1,7 @@
 ---
 title: "Shaliqua McKnight"
 role: "Reentry Coordinator"
+email: "shaliqua@opencityadvocates.org"
 photo: "images/shaliqua-mcknight.jpg"
 ---
 
