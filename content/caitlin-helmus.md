@@ -1,6 +1,7 @@
 ---
 title: "Caitlin Helmus, Esq."
 role: "Staff Attorney"
+email: "caitlin@opencityadvocates.org"
 photo: "images/caitlin-helmus.jpg"
 ---
 
