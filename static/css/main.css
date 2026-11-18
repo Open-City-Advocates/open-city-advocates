@@ -175,7 +175,7 @@ iframe { max-width: 100%; }
 .bio-text > :last-child { margin-bottom: 0; }
 .bio-photo { grid-column: 3; grid-row: 1 / span 4; }
 .bio-photo img { width: 100%; max-width: 382px; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
-.bio-form { grid-column: 2; grid-row: 3; justify-self: end; width: 312px; max-width: 100%; margin-top: 17px; }
+.bio-contact { grid-column: 2; grid-row: 3; margin: 17px 0 0; }
 .bio-actions { grid-column: 2; grid-row: 4; margin-top: 17px; }
 .bio.no-photo .bio-text { columns: 1; max-width: 378px; }
 
@@ -267,9 +267,8 @@ iframe { max-width: 100%; }
   .submenu a { font-size: 16px; }
   .home-cols, .vision, .footer-inner, .team, .aside-page, .report-body { grid-template-columns: 1fr; }
   .bio { grid-template-columns: 1fr; }
-  .bio-head, .bio-text, .bio-form, .bio-actions, .bio-photo { grid-column: 1; grid-row: auto; }
+  .bio-head, .bio-text, .bio-contact, .bio-actions, .bio-photo { grid-column: 1; grid-row: auto; }
   .bio-text { columns: 1; }
-  .bio-form { justify-self: start; }
   .bio-photo { order: 10; margin-top: 34px; }
   .bio-photo img { max-width: 100%; }
   .report > h1, .report-body { margin-left: 0; }
@@ -302,7 +301,6 @@ iframe { max-width: 100%; }
   .aside-page, .narrow, .posting, .report, .team, .bio, .plain, .document, .archive-hero { padding-top: 48px; }
   .aside-page.auto > h2, .aside-page.auto > p { margin-bottom: 32px; }
   .narrow > ul { padding: 32px 0; }
-  .bio-form { width: 100%; }
   .post-nav { flex-direction: column; }
   .post-nav .next { margin-left: 0; }
 }
