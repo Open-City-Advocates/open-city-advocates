@@ -1,6 +1,7 @@
 ---
 title: "Sonia Slone, MBA"
 role: "Operations & Finance Specialist"
+email: "sonia@opencityadvocates.org"
 photo: "images/sonia-slone.jpg"
 ---
 

@@ -30,6 +30,8 @@ const pages = defineCollection({
       // Team bios: the line shown above the name, and the headshot (under static/).
       role: z.string().optional(),
       photo: z.string().optional(),
+      // Staff bios: the address the bio's email link goes to. Bios without one show no link.
+      email: z.string().email().optional(),
       // true keeps a page out of the build (for example an archived bio).
       draft: z.boolean().default(false),
       // Publish at this path instead of the one the file name gives.

@@ -1,6 +1,7 @@
 ---
 title: "Raymond Ngu, Esq."
 role: "Legal Director"
+email: "raymond@opencityadvocates.org"
 photo: "images/raymond-ngu.jpg"
 ---
 

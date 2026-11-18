@@ -1,6 +1,7 @@
 ---
 title: "Kyla Woods, MPM"
 role: "Associate Director of Policy & Outreach"
+email: "kyla@opencityadvocates.org"
 photo: "images/kyla-woods.jpeg"
 ---
 

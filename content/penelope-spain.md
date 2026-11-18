@@ -1,6 +1,7 @@
 ---
 title: "Penelope Spain, Esq."
 role: "Co-Founder & Chief Executive Officer"
+email: "penelope@opencityadvocates.org"
 photo: "images/penelope-spain.jpg"
 ---
 
