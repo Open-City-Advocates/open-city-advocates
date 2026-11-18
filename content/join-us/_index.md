@@ -12,4 +12,4 @@ In 2020, the DC Court of Appeals ruled in our favor in our longstanding impact l
 
 ## Open Positions
 
-* [Legal Intern](/join-us/legal-intern)
+There are no open positions right now.
