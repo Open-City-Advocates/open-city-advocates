@@ -3,6 +3,7 @@ title: "Our Team"
 layout: our-team
 # Staff, alphabetical by last name as on the live site. Name and role come from each bio page.
 staff:
+  - "/caitlin-helmus"
   - "/whitney-louchheim"
   - "/shaliqua-mcknight"
   - "/joshua-miller"
