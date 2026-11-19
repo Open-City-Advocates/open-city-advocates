@@ -4,10 +4,10 @@
   "name": "open-city-advocates",
   "compatibility_date": "2026-10-22",
 
-  // true keeps a *.workers.dev copy of the site for previewing before the
-  // cutover. Once the apex and www custom domains are live, set this to false
-  // (as the YJP site does) so search engines see only one copy.
-  "workers_dev": true,
+  // false: the site is served only at the custom domains (www and the apex),
+  // so search engines see one copy. Set it to true to get a *.workers.dev
+  // preview address back.
+  "workers_dev": false,
 
   // A static-assets-only Worker: there is no script, every request is served
   // from ./public, the build output.
