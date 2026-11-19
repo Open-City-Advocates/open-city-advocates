@@ -10,7 +10,7 @@ description: "Testimony to the DC Council's Committee on the Judiciary and Publi
 
 **Justice-Involved Youth in Community Act of 2025**  
 **Committee on the Judiciary and Public Safety, Council of the District of Columbia**  
-**Ward 3 Councilmember Brooke Pinto, Chairperson**
+**Ward 2 Councilmember Brooke Pinto, Chairperson**
 
 **April 23, 2025**
 
@@ -24,8 +24,8 @@ When we first founded our nonprofit twenty years ago, we had a different name: M
 
 Research about mentoring best practices suggests that a punitive approach to mentoring doesn’t work, and can indeed backfire. Numerous high quality studies have identified best practices that, when followed, significantly enhance a program’s effectiveness. Some of these best practices include:
 
-5. matching mentoring pairs based on shared interests, and
-6. providing a structure through which mentors can advocate **on behalf** of their mentees.
+- matching mentoring pairs based on shared interests, and
+- providing a structure through which mentors can advocate **on behalf** of their mentees.
 
 Of all the various mediating factors that mentoring programs included, an advocacy role had by far the most significant effect on a program’s effectiveness in terms of youth outcomes.¹
 
@@ -68,8 +68,8 @@ Research about mentoring best practices suggests that a punitive approach to men
 2. serving a high proportion of males,
 3. providing ongoing and timely emotional support to the mentors and mentees,
 4. recruiting mentors from targeted sources to create “a good fit between the educational or occupational backgrounds of mentors and the goals of the program,”
-5. matching mentoring pairs based on shared interests, and
-6. providing a structure through which mentors can advocate **on behalf** of their mentees.
+- matching mentoring pairs based on shared interests, and
+- providing a structure through which mentors can advocate **on behalf** of their mentees.
 
 Importantly, programs that include more than six best practices have twice the impact of programs with fewer best practices.⁵
 

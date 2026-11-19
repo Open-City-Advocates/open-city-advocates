@@ -201,7 +201,7 @@ The ROAD Act would not make it harder for DYRS to do its job. To the contrary, w
 8. https://www.sentencingproject.org/policy-brief/youth-justice-by-the-numbers/.
 9. https://aspe.hhs.gov/reports/state-practices-treatmenttherapeutic-foster-care.
 10. https://www.cebc4cw.org/program/treatment-foster-care-oregon-adolescents/.
-11. https://www.cebc4cw.org/program/together-facing-the-challenge/detailed.
+11. <https://www.cebc4cw.org/program/together-facing-the-challenge/>
 12. CMS “Dear State Health Official” letter, dated July 23, 2024. (SHO# 24-004 RE: Provision of Medicaid and CHIP Services to Incarcerated Youth).
 13. CMS “Dear State Health Official” 7/23/24 letter, page 3.
 14. CMS “Dear State Health Official” 7/23/24 letter, page 16.

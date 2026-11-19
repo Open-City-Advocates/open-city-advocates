@@ -16,7 +16,7 @@ description: "Budget oversight testimony to the DC Council's Committee on the Ju
 
 **Committee on the Judiciary and Public Safety**
 
-**Ward 3 Councilmember Brooke Pinto, Chairperson**
+**Ward 2 Councilmember Brooke Pinto, Chairperson**
 
 ## Testimony of Whitney Louchheim, Chief Operating Officer
 

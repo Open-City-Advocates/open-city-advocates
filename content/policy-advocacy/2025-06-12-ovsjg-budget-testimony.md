@@ -11,7 +11,7 @@ description: "Testimony from Open City Advocates CEO Penelope Spain and two clie
 **Office of Victim Services and Justice Grants (OVSJG) Budget Oversight Hearing**
 
 **Committee on the Judiciary and Public Safety**
-**Ward 3 Councilmember Brooke Pinto, Chairperson**
+**Ward 2 Councilmember Brooke Pinto, Chairperson**
 
 **June 12, 2025**
 

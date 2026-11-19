@@ -16,7 +16,7 @@ description: "Performance oversight testimony to the DC Council's Committee on t
 
 **Committee on the Judiciary and Public Safety**
 
-**Ward 3 Councilmember Brooke Pinto, Chairperson**
+**Ward 2 Councilmember Brooke Pinto, Chairperson**
 
 ## Testimony of Penelope Spain
 
