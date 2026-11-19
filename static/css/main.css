@@ -180,21 +180,6 @@ iframe { max-width: 100%; }
 .bio.no-photo .bio-text { columns: 1; max-width: 378px; }
 
 /* Squarespace-style forms (fields underlined, black Submit) */
-.sq-form { font-size: 17px; }
-.sq-form .field { margin: 0 0 20px; }
-.sq-form .title { display: block; padding: 0 0 4px; }
-.sq-form .caption { display: block; font-size: 12px; letter-spacing: .06em; padding: 0 0 4px; }
-.sq-form .required { font-size: 12px; letter-spacing: .06em; }
-.sq-form input[type="text"], .sq-form input[type="email"], .sq-form textarea { width: 100%; border: 0; border-bottom: 1px solid var(--brown); border-radius: 0; background: transparent; padding: 5px 0; font: inherit; letter-spacing: inherit; color: inherit; }
-.sq-form input:focus, .sq-form textarea:focus { outline: 2px solid var(--orange); outline-offset: 2px; }
-.sq-form textarea { min-height: 100px; resize: vertical; }
-.sq-form .option { display: flex; align-items: flex-start; gap: 9px; font-size: .9em; margin: 6px 0; }
-.sq-form .option input { margin: 5px 0 0; width: 15px; height: 15px; }
-.sq-form .name-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.sq-form .submit { font-family: var(--sans); font-size: 15px; line-height: 1.3; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: #000; border: 0; padding: 22px 36px; cursor: pointer; }
-.sq-form .submit:hover { background: var(--orange); }
-.sq-form .submit-row.right { text-align: right; }
-.sq-form .form-note { font-size: 12px; letter-spacing: .06em; margin: 8px 0 0; }
 
 /* News list: square thumbnail, then date, title, Read More */
 .news-list { list-style: none; margin: 0; padding: 34px var(--gutter) 0; }
@@ -304,3 +289,8 @@ iframe { max-width: 100%; }
   .post-nav { flex-direction: column; }
   .post-nav .next { margin-left: 0; }
 }
+
+/* Defense Guide: the way into the manual's sign-in site */
+.manual-access-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 28px; margin: 28px 0 0; }
+.manual-signin { font-size: 17px; }
+.manual-access-note { font-size: 15px; color: var(--brown); margin: 18px 0 0; max-width: 34rem; }

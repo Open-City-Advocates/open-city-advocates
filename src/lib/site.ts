@@ -15,6 +15,9 @@ export const CONTACT = {
 export const SUBSCRIBE_URL = "https://opencityadvocates.app.neoncrm.com/subscribe.jsp";
 export const DONATE_URL = "https://opencityadvocates.app.neoncrm.com/forms/donation-form";
 
+// The Post-Disposition Defense Manual: a separate, sign-in-only site (private repo Open-City-Advocates/oca-manual).
+export const MANUAL_URL = "https://manual.opencityadvocates.org";
+
 // Main navigation, in the live site's order. An item with `children` is a dropdown folder.
 export interface MenuItem {
   name: string;

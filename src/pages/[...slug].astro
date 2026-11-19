@@ -4,7 +4,7 @@
 // the centered Join Us pages, Mission & Values, and the Policy & Advocacy archive.
 import { render } from "astro:content";
 import Base from "../layouts/Base.astro";
-import RequestAccessForm from "../components/RequestAccessForm.astro";
+import ManualAccess from "../components/ManualAccess.astro";
 import {
   byDateDesc,
   findPage,
@@ -201,7 +201,7 @@ const ogType = isSection(page) ? "website" : "article";
     <h1>{data.title}</h1>
     <div class="aside-body">
       <Content />
-      <RequestAccessForm />
+      <ManualAccess />
     </div>
   </div>
 )}
@@ -217,7 +217,7 @@ const ogType = isSection(page) ? "website" : "article";
   <div class="plain">
     <h1>{data.title}</h1>
     <Content />
-    {path === APPLY && <RequestAccessForm />}
+    {path === APPLY && <ManualAccess />}
   </div>
 )}
 

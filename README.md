@@ -20,7 +20,7 @@ open-city-advocates/
 ├─ content/                      # every page, as Markdown (see below)
 ├─ src/
 │  ├─ layouts/Base.astro         # page skeleton and <head> (title, description, social cards)
-│  ├─ components/                # Header (nav), Footer, and the Defense Guide form (RequestAccessForm)
+│  ├─ components/                # Header (nav), Footer, and the Defense Guide's link to the manual (ManualAccess)
 │  ├─ pages/index.astro          # the homepage layout
 │  ├─ pages/[...slug].astro      # every other page: bios, news, testimony, lists, Our Team
 │  ├─ lib/site.ts                # menu, contact details, Neon links, URL helpers
@@ -66,10 +66,10 @@ misspelled field fails the build instead of being silently ignored.
   reports use this to keep their Squarespace addresses).
 - A policy archive entry with `href:` links to that address (a PDF, or another
   page) instead of getting its own page.
-- The Defense Guide's "Request Access" form has no server here. It looks as
-  it did on Squarespace, but submitting opens the visitor's email app with the
-  fields addressed to `CONTACT.email` in `src/lib/site.ts`; change the address
-  there. Staff bios have no form: each links to the person's own `email`.
+- The site has no forms. The Defense Guide (and the old apply page) link to the
+  Post-Disposition Defense Manual's own sign-in site, `MANUAL_URL` in
+  `src/lib/site.ts`, where attorneys apply and sign in. Staff bios link to the
+  person's own `email`.
 
 ## Redirects and the route check
 
