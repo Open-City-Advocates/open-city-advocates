@@ -260,6 +260,7 @@ iframe.yt { min-height: 200px; } /* YouTube's minimum player size */
 .archive-video .yt { box-shadow: 12px 12px 0 var(--brown); }
 .archive-video figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px; margin-top: 24px; }
 .av-title { font-family: var(--display); font-size: 18px; line-height: 1.3; }
+.av-links { display: flex; flex-wrap: wrap; gap: 4px 18px; }
 .archive-video figcaption a { color: #fff; font-weight: 700; white-space: nowrap; }
 .archive-video figcaption a:hover { color: var(--brown); }
 .dtag.watch { background: var(--brown); border-color: var(--brown); color: #fff; }
@@ -273,6 +274,7 @@ iframe.yt { min-height: 200px; } /* YouTube's minimum player size */
 .dv-label { font-family: var(--display); font-size: 18px; letter-spacing: .08em; text-transform: uppercase; color: var(--yellow); margin: 0 0 12px; }
 .doc-video figcaption { font-size: 15px; margin-top: 12px; }
 .doc-video .av-title { display: block; color: #fff; }
+.doc-video .yt-direct { color: var(--yellow); white-space: nowrap; }
 .document table { width: 100%; border-collapse: collapse; margin: 0 0 34px; font-size: 15px; }
 .document th, .document td { text-align: left; vertical-align: top; padding: 9px 12px 9px 0; border-bottom: 1px solid var(--rule); }
 .document th { border-bottom-color: var(--brown); }

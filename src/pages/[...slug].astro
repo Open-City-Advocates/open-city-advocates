@@ -240,7 +240,10 @@ const ogType = isSection(page) ? "website" : "article";
           <YouTubeVideo id={featured.id} title={featured.title} />
           <figcaption>
             <span class="av-title">{featured.title}</span>
-            {featuredDoc && <a href={pageUrl(featuredDoc)}>Read the testimony &rarr;</a>}
+            <span class="av-links">
+              {featuredDoc && <a href={pageUrl(featuredDoc)}>Read the testimony &rarr;</a>}
+              <a href={`https://www.youtube.com/watch?v=${featured.id}`}>Watch on YouTube</a>
+            </span>
           </figcaption>
         </figure>
       )}
@@ -290,7 +293,7 @@ const ogType = isSection(page) ? "website" : "article";
       <figure class="doc-video">
         <p class="dv-label">&#9654; Watch</p>
         <YouTubeVideo id={video.id} title={video.title} />
-        <figcaption><span class="av-title">{video.title}</span>{video.caption && <> {video.caption}</>}</figcaption>
+        <figcaption><span class="av-title">{video.title}</span>{video.caption && <> {video.caption}</>} <a class="yt-direct" href={`https://www.youtube.com/watch?v=${video.id}`}>Watch on YouTube</a></figcaption>
       </figure>
     ))}
 
