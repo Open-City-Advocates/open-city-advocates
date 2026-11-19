@@ -1,5 +1,5 @@
 ---
-title: "Missions & Values"
+title: "Mission & Values"
 ---
 
 ## Mission

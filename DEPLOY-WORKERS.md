@@ -1,8 +1,9 @@
 # Cloudflare Workers deployment
 
-**Status (November 2026): not live yet.** The site deploys to the Worker's
-workers.dev address for review. The domain still serves Squarespace until the
-cutover (planned for Tuesday, Nov 17, 2026).
+**Status: live.** The cutover from Squarespace happened on Tuesday, Nov 17,
+2026: www.opencityadvocates.org and the apex are Custom Domains on the Worker,
+and the workers.dev copy is off (`"workers_dev": false`). The cutover steps
+below are kept for reference.
 
 Repo side: `wrangler.jsonc`, `package.json`, `.node-version`, and
 `static/_redirects`. There is no Worker script; Cloudflare serves the build
@@ -95,7 +96,7 @@ With the zone active on Cloudflare and the Squarespace records still in place:
    `http://` redirects. Run it with the workers.dev address first to see it
    pass; before the cutover the live domain fails the Worker checks.
 4. Once the domains are live and checked, set `"workers_dev": false` in
-   `wrangler.jsonc` so only one copy of the site is public.
+   `wrangler.jsonc` so only one copy of the site is public. (Done 2026-11-18.)
 
 **Rollback:** remove the two Custom Domains and restore the Squarespace
 records from the DNS inventory (DNS-only). The Squarespace site stays
@@ -104,9 +105,10 @@ available until the plan is canceled in January.
 ## What the Worker cannot replace
 
 Squarespace hosted two kinds of forms: "Request Access" on the Defense Guide
-page and a contact form on each staff bio. The static site shows the same
-forms, but submitting one opens the visitor's email app with the fields
-addressed to `info@opencityadvocates.org` (see README.md). The homepage
+page and a contact form on each staff bio. The Defense Guide form looks the
+same, but submitting it opens the visitor's email app with the fields
+addressed to `info@opencityadvocates.org`. Staff bios link to each person's
+own email address instead of a form (see README.md). The homepage
 video was a Squarespace-hosted MP4; the site embeds OCA's YouTube upload of the
 same film, "20 Years of Open City Advocates", instead. Everything else on the
 Squarespace site (every page in its sitemap, every image, PDF and embed) is

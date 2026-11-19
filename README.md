@@ -20,7 +20,7 @@ open-city-advocates/
 ├─ content/                      # every page, as Markdown (see below)
 ├─ src/
 │  ├─ layouts/Base.astro         # page skeleton and <head> (title, description, social cards)
-│  ├─ components/                # Header (nav), Footer, and the two forms (ContactForm, RequestAccessForm)
+│  ├─ components/                # Header (nav), Footer, and the Defense Guide form (RequestAccessForm)
 │  ├─ pages/index.astro          # the homepage layout
 │  ├─ pages/[...slug].astro      # every other page: bios, news, testimony, lists, Our Team
 │  ├─ lib/site.ts                # menu, contact details, Neon links, URL helpers
@@ -51,9 +51,9 @@ Each Markdown file under `content/` is one page. The file's path is its address:
 |---|---|
 | `content/_index.md` | `/` (homepage text, plus `mission` and `vision` in the front matter) |
 | `content/our-team.md` | `/our-team` (lists the `staff` and `board` bio pages named in its front matter) |
-| `content/penelope-spain.md` | `/penelope-spain` (a bio; `role` is the line above the name, `photo` the headshot; staff bios get a contact form, board bios do not) |
+| `content/penelope-spain.md` | `/penelope-spain` (a bio; `role` is the line above the name, `photo` the headshot, `email` the address its "To reach …, email …" line links to; bios without `email` show no contact line) |
 | `content/news-updates/_index.md` | `/news-updates` (lists every post in the folder, newest first) |
-| `content/news-updates/<name>.md` | `/news-updates/<name>` (a post; needs `date` and `author`; `image` and `summary` fill its card on the News list) |
+| `content/news-updates/<name>.md` | `/news-updates/<name>` (a post; needs `date`; `image` is its thumbnail on the News list) |
 | `content/policy-advocacy/<name>.md` | `/policy-advocacy/<name>` (testimony; see an existing file for the fields) |
 | `content/join-us/<name>.md` | `/join-us/<name>` (a job posting) |
 
@@ -65,10 +65,10 @@ misspelled field fails the build instead of being silently ignored.
   reports use this to keep their Squarespace addresses).
 - A policy archive entry with `href:` links to that address (a PDF, or another
   page) instead of getting its own page.
-- Squarespace forms (the Defense Guide's "Request Access" form and the contact
-  form on each staff bio) have no server here. They look as they did, but
-  submitting opens the visitor's email app with the fields addressed to
-  `CONTACT.email` in `src/lib/site.ts`; change the address there.
+- The Defense Guide's "Request Access" form has no server here. It looks as
+  it did on Squarespace, but submitting opens the visitor's email app with the
+  fields addressed to `CONTACT.email` in `src/lib/site.ts`; change the address
+  there. Staff bios have no form: each links to the person's own `email`.
 
 ## Redirects and the route check
 

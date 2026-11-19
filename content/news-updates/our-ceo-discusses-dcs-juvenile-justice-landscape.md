@@ -7,7 +7,7 @@ author: "Joshua Miller"
 image: "images/news-ceo-discussion.jpg"
 ---
 
-Penelope joined [Jenny Gathright](https://twitter.com/jennygathright) (of [WAMU](https://wamu.org/person/jenny-gathright/) and [DCist](https://dcist.com/person/jenny-gathright/)) and [Jennifer Backus](https://impact100dc.org/team/jenny-backus/) (of [Bachus Consulting](http://backusconsulting.com)) for a discussion of Open City Advocates' work and the current situation for young people encountering the criminal legal system in DC. Watch the video here!
+Penelope joined [Jenny Gathright](https://twitter.com/jennygathright) (of [WAMU](https://wamu.org/person/jenny-gathright/) and [DCist](https://dcist.com/person/jenny-gathright/)) and [Jennifer Backus](https://impact100dc.org/team/jenny-backus/) (of [Backus Consulting](http://backusconsulting.com)) for a discussion of Open City Advocates' work and the current situation for young people encountering the criminal legal system in DC. Watch the video here!
 
 <div class="video-embed">
   <iframe referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/ohaPCoL8AG0" title="Impact100 DC Conversation About Juvenile Justice in the DMV" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
