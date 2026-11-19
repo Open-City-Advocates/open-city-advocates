@@ -27,6 +27,7 @@ open-city-advocates/
 │  ├─ lib/markdown-links.mjs     # external links open in a new tab; images load lazily
 │  └─ content.config.ts          # the front matter fields pages may use
 ├─ static/                       # copied to the site as-is: css, fonts, images, PDFs, _redirects
+│  └─ s/                         # PDFs the Squarespace site served at /s/<file>, kept at those addresses
 ├─ scripts/check-route-inventory.mjs  # runs after every build (see below)
 ├─ wrangler.jsonc                # Cloudflare Workers static-assets config
 └─ public/                       # BUILD OUTPUT (generated; do not edit or commit)
