@@ -6,6 +6,10 @@ by: "Rondell Jordan · Open City Advocates"
 doctype: "Testimony"
 tags: ["Legislation", "Public safety"]
 description: "Written testimony opposing the Safer Stronger Amendment Act as a fear-driven bill that would increase youth incarceration in the District."
+videos:
+  - id: "nDLxbOXBz04"
+    title: "Rondell Jordan's testimony against B25-291"
+    caption: "Rondell Jordan testifying before the Committee on the Judiciary and Public Safety, June 27, 2023."
 ---
 
 Good afternoon, Chairman Pinto, et al. My name is Rondell Jordan, and I am a resident of Ward 2 and a Staff Attorney for Open City Advocates, which provides legal representation and mentoring to youth who have been committed to DYRS. Open City Advocates is also a member of the Youth Justice Project Coalition, a coalition of DC-based organizations that strives to create a DC where our children, and particularly our Black and Brown children, are free to be kids and are supported throughout their transformation into healthy, thriving adults.

@@ -6,6 +6,10 @@ by: "Penelope Spain & Joshua Miller · Open City Advocates"
 doctype: "Testimony"
 tags: ["Budget", "DYRS oversight"]
 description: "Oral and written testimony to the DC Council's Committee on Youth Affairs on the FY27 DYRS budget, opposing a $29 million expansion of locked-facility beds and urging investment in community-based youth services."
+videos:
+  - id: "-shiqQ89h38"
+    title: "Penelope Spain at the DC Council: Treat Kids Like Kids"
+    caption: "Clips from Penelope Spain's testimony at DC Council hearings from June 2023 to May 2026, including this one."
 ---
 
 ## TESTIMONY OF OPEN CITY ADVOCATES
