@@ -242,7 +242,7 @@ const ogType = isSection(page) ? "website" : "article";
             <span class="av-title">{featured.title}</span>
             <span class="av-links">
               {featuredDoc && <a href={pageUrl(featuredDoc)}>Read the testimony &rarr;</a>}
-              <a href={`https://www.youtube.com/watch?v=${featured.id}`}>Watch on YouTube</a>
+              <a href={`https://www.youtube.com/watch?v=${featured.id}`} aria-label={`Watch on YouTube: ${featured.title}`}>Watch on YouTube</a>
             </span>
           </figcaption>
         </figure>
@@ -293,7 +293,7 @@ const ogType = isSection(page) ? "website" : "article";
       <figure class="doc-video">
         <p class="dv-label">&#9654; Watch</p>
         <YouTubeVideo id={video.id} title={video.title} />
-        <figcaption><span class="av-title">{video.title}</span>{video.caption && <> {video.caption}</>} <a class="yt-direct" href={`https://www.youtube.com/watch?v=${video.id}`}>Watch on YouTube</a></figcaption>
+        <figcaption><span class="av-title">{video.title}</span>{video.caption && <> {video.caption}</>} <a class="yt-direct" href={`https://www.youtube.com/watch?v=${video.id}`} aria-label={`Watch on YouTube: ${video.title}`}>Watch on YouTube</a></figcaption>
       </figure>
     ))}
 
