@@ -11,7 +11,7 @@ summary: "OCA Previous Updates"
 
 **[Nonprofit receives $100K grant for work in DC juvenile justice system](https://www.nbcwashington.com/community/nonprofit-receives-100k-grant-to-help-youth-in-dc-justice-system/3392799/)**, NBC4, July 2023
 
-**[AUWCL Alumna's Making a Difference in Human Rights and Community Advocates](https://www.wcl.american.edu/news-events/news/auwcl-alumnas-making-a-difference-in-human-rights-and-community-advocates/)**, July 2023
+**[AUWCL Alumna's Making a Difference in Human Rights and Community Advocates](https://web.archive.org/web/20240523025055/https://www.wcl.american.edu/news-events/news/auwcl-alumnas-making-a-difference-in-human-rights-and-community-advocates/)**, July 2023
 
 **[Open City Advocates Welcomes Two New Board Members](https://mailchi.mp/6bba96a7b4ff/striving-for-racial-justice-6075869)**, May 2023
 
@@ -71,7 +71,7 @@ August 2016.
 
 July 2016.
 
-**[The Equal Justice Foundation at the Washington College of Law Honors Our Co-Founders with the Alumni Award,](https://news.wcl.american.edu/more-news/equal-justice-foundation-hosts-22nd-annual-public-interest-auction-to-fund-student-scholarships/)**
+**The Equal Justice Foundation at the Washington College of Law Honors Our Co-Founders with the Alumni Award,**
 
 March 2016.
 
@@ -87,7 +87,7 @@ American University's Washington College of Law, November 2015.
 
 The Washington Post, August 24, 2014.
 
-**[Teens at Reach Incorporated Choose Mentoring Today to Receive Top Prize,](http://www.reachincorporated.org/2014/08/teens-give-back-2/)**
+**Teens at Reach Incorporated Choose Mentoring Today to Receive Top Prize,**
 
 August 13, 2014.
 
@@ -103,7 +103,7 @@ NJJEC Bulletin, July 2014.
 
 Guest Post for the Catalogue for Philanthropy, January 27, 2014.
 
-**[Mentoring Today’s CEO, Penelope Spain, is featured on “Making It Last”](http://mmctv.granicus.com/MediaPlayer.php?view_id=3&clip_id=1549)**
+**Mentoring Today’s CEO, Penelope Spain, is featured on “Making It Last”**
 
 with Regina DeMeo, broadcast on Montgomery Municipal Cable Channel 16, December 11, 2013 (requires Internet Explorer or Mozilla Firefox).
 
@@ -111,7 +111,7 @@ with Regina DeMeo, broadcast on Montgomery Municipal Cable Channel 16, December 
 
 Metro Connection, WAMU 88.5 FM, Washington, DC, September 27, 2013.
 
-**[“Back on Track after Being Behind Bars,”](http://www.findyouthinfo.gov/node/20485)**
+**[“Back on Track after Being Behind Bars,”](https://web.archive.org/web/20140716022441/http://findyouthinfo.gov/node/20485)**
 
 FindYouthInfo.gov, December 2012, featuring one of our mentees.
 
@@ -119,7 +119,7 @@ FindYouthInfo.gov, December 2012, featuring one of our mentees.
 
 DC Lawyers for Youth, February 2012.
 
-**[Washington College of Law’s Public Service Award](https://www.wcl.american.edu/publicinterest/previous_cicchinoawards.cfm)**,
+**[Washington College of Law’s Public Service Award](https://web.archive.org/web/20170721083815/https://www.wcl.american.edu/publicinterest/previous_cicchinoawards.cfm)**,
 
 Penelope Spain & Whitney Louchheim receive the 2010-2011 Peter M. Cicchino Public Service Award, April 13, 2011.
 
@@ -127,7 +127,7 @@ Penelope Spain & Whitney Louchheim receive the 2010-2011 Peter M. Cicchino Publi
 
 Woolly Mammoth Theatre Company’s interview with Penelope Spain and Whitney Louchheim, Washington, DC, February 2, 2011.
 
-**[“Young Offenders in Washington Benefit from Volunteer Mentors,”](http://www.thenational.ae/news/worldwide/americas/young-offenders-in-washington-benefit-from-volunteer-mentors)**
+**“Young Offenders in Washington Benefit from Volunteer Mentors,”**
 
 The National, Abu Dhabi, May 17, 2010.
 
@@ -135,7 +135,7 @@ The National, Abu Dhabi, May 17, 2010.
 
 Christian Science Monitor, March 16, 2010.
 
-**[“Alumni Spotlight: Penelope Spain & Whitney Louchheim: Mentoring Today,”](http://www.wcl.american.edu/alumni/spotlight/09spain.cfm)**
+**[“Alumni Spotlight: Penelope Spain & Whitney Louchheim: Mentoring Today,”](https://web.archive.org/web/20170720210702/https://www.wcl.american.edu/alumni/spotlight/09spain.cfm)**
 
 The Advocate, Washington College of Law, American University, vol. 20, Summer 2009.
 
@@ -165,7 +165,7 @@ Napa Valley Register, Napa, CA, September 2006.
 
 **Our youth made the news, too!**
 
-**[2010 Spirit of Youth Award](http://www.juvjustice.org/award_detail_43.html)**,
+**[2010 Spirit of Youth Award](https://web.archive.org/web/20121110124036/http://www.juvjustice.org:80/award_detail_43.html)**,
 
 Coalition for Juvenile Justice honors Mentoring Today mentee, April 10, 2010.
 
