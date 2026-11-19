@@ -1,0 +1,40 @@
+---
+// A YouTube video that loads nothing from YouTube until someone presses play:
+// it shows the video's thumbnail as a link to the video, and swaps in the
+// privacy-enhanced (youtube-nocookie) player on click. Without JavaScript the
+// link opens the video on YouTube.
+interface Props {
+  id: string;
+  title: string;
+}
+const { id, title } = Astro.props;
+---
+<a class="yt" href={`https://www.youtube.com/watch?v=${id}`} data-yt={id} aria-label={`Play video: ${title}`}>
+  <img src={`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`} alt="" loading="lazy" width="1280" height="720" />
+  <span class="yt-play" aria-hidden="true"></span>
+</a>
+
+<script>
+  for (const link of document.querySelectorAll<HTMLAnchorElement>("a.yt[data-yt]")) {
+    // Not every video has a full-size thumbnail; YouTube answers with a 120px placeholder.
+    const img = link.querySelector("img");
+    const fallback = () => {
+      if (img && img.naturalWidth > 0 && img.naturalWidth < 200) img.src = img.src.replace("maxresdefault", "hqdefault");
+    };
+    if (img?.complete) fallback();
+    else img?.addEventListener("load", fallback, { once: true });
+
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const player = document.createElement("iframe");
+      player.className = "yt";
+      player.src = `https://www.youtube-nocookie.com/embed/${link.dataset.yt}?autoplay=1`;
+      player.title = link.getAttribute("aria-label")?.replace(/^Play video: /, "") ?? "";
+      player.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      player.referrerPolicy = "strict-origin-when-cross-origin";
+      player.allowFullscreen = true;
+      link.replaceWith(player);
+      player.focus();
+    });
+  }
+</script>

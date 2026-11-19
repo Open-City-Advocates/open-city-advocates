@@ -50,6 +50,11 @@ const pages = defineCollection({
       tags: z.array(z.string()).default([]),
       // Archive entries that live elsewhere link out instead of rendering a page.
       href: z.string().optional(),
+      // YouTube videos shown at the top of an archive entry (id = the part after
+      // "watch?v="). On the archive's _index.md, the first one is the featured video.
+      videos: z
+        .array(z.object({ id: z.string(), title: z.string(), caption: z.string().optional() }).strict())
+        .default([]),
     })
     .strict(),
 });

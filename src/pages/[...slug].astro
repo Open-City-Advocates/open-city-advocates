@@ -5,6 +5,7 @@
 import { render } from "astro:content";
 import Base from "../layouts/Base.astro";
 import ManualAccess from "../components/ManualAccess.astro";
+import YouTubeVideo from "../components/YouTubeVideo.astro";
 import {
   byDateDesc,
   findPage,
@@ -76,6 +77,11 @@ const posts = kind === "post" ? byDateDesc(sectionPages(all, "news-updates")) : 
 const at = posts.findIndex((post) => post.id === page.id);
 const newer = at > 0 ? posts[at - 1] : undefined;
 const older = at >= 0 && at < posts.length - 1 ? posts[at + 1] : undefined;
+
+// Policy & Advocacy archive: the featured video (the first in _index.md's
+// `videos`) and the entry that carries the same video, for "Read the testimony".
+const featured = kind === "policy-list" ? data.videos[0] : undefined;
+const featuredDoc = featured ? children.find((doc) => !doc.data.href && doc.data.videos.some((video) => video.id === featured.id)) : undefined;
 
 // Policy & Advocacy archive: grouped by year, newest year first.
 const years = new Map<string, Page[]>();
@@ -223,9 +229,21 @@ const ogType = isSection(page) ? "website" : "article";
 
 {kind === "policy-list" && (
   <>
-    <section class="archive-hero">
-      <h1>{data.title}</h1>
-      {page.body?.trim() && <div class="lede"><Content /></div>}
+    <section class:list={["archive-hero", { "has-video": featured }]}>
+      <div class="archive-intro">
+        <h1>{data.title}</h1>
+        {page.body?.trim() && <div class="lede"><Content /></div>}
+        {featured && <p class="watch-note"><span class="dtag watch">&#9654; Watch</span> Entries marked Watch have video.</p>}
+      </div>
+      {featured && (
+        <figure class="archive-video">
+          <YouTubeVideo id={featured.id} title={featured.title} />
+          <figcaption>
+            <span class="av-title">{featured.title}</span>
+            {featuredDoc && <a href={pageUrl(featuredDoc)}>Read the testimony &rarr;</a>}
+          </figcaption>
+        </figure>
+      )}
     </section>
 
     <div class="archive">
@@ -237,7 +255,7 @@ const ogType = isSection(page) ? "website" : "article";
           </div>
           {docs.map((doc) => (
             <a
-              class="doc-row"
+              class:list={["doc-row", { "has-video": doc.data.videos.length > 0 }]}
               href={doc.data.href ? doc.data.href.replace(/(.)\/$/, "$1") : pageUrl(doc)}
               target={doc.data.href ? "_blank" : undefined}
               rel={doc.data.href ? "noopener" : undefined}
@@ -246,9 +264,13 @@ const ogType = isSection(page) ? "website" : "article";
               <div class="dmeta">
                 <div class="dttl">{doc.data.title}</div>
                 {doc.data.by && <div class="dby">{doc.data.by}</div>}
-                <div class="dtags"><span class="dtag type">{doc.data.doctype}</span>{doc.data.tags.map((tag) => <span class="dtag">{tag}</span>)}</div>
+                <div class="dtags">{doc.data.videos.length > 0 && <span class="dtag watch">&#9654; Watch</span>}<span class="dtag type">{doc.data.doctype}</span>{doc.data.tags.map((tag) => <span class="dtag">{tag}</span>)}</div>
               </div>
-              <div class="dgo">Read &rarr;</div>
+              {doc.data.videos.length > 0 ? (
+                <div class="dthumb" aria-hidden="true"><img src={`https://i.ytimg.com/vi/${doc.data.videos[0].id}/hqdefault.jpg`} alt="" loading="lazy" width="480" height="360" /><span class="yt-play"></span></div>
+              ) : (
+                <div class="dgo">Read &rarr;</div>
+              )}
             </a>
           ))}
         </section>
@@ -263,6 +285,14 @@ const ogType = isSection(page) ? "website" : "article";
     <h1>{data.title}</h1>
     {data.by && <p class="doc-by">{data.by}</p>}
     {data.tags.length > 0 && <div class="dtags">{data.tags.map((tag) => <span class="dtag">{tag}</span>)}</div>}
+
+    {data.videos.map((video) => (
+      <figure class="doc-video">
+        <p class="dv-label">&#9654; Watch</p>
+        <YouTubeVideo id={video.id} title={video.title} />
+        <figcaption><span class="av-title">{video.title}</span>{video.caption && <> {video.caption}</>}</figcaption>
+      </figure>
+    ))}
 
     <Content />
 

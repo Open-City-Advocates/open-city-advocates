@@ -241,6 +241,42 @@ iframe { max-width: 100%; }
 .back-link a { color: var(--brown); text-decoration: none; }
 .back-link a:hover { text-decoration: underline; }
 
+/* Video in the Policy & Advocacy archive: the orange hero with the featured
+   video, rows marked Watch, and the player at the top of a testimony page.
+   YouTubeVideo.astro draws the thumbnail (.yt) that turns into the player. */
+.yt { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; background: #000; }
+a.yt img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.yt-play { position: absolute; left: 50%; top: 50%; width: 84px; height: 84px; transform: translate(-50%, -50%); border-radius: 50%; background: var(--orange); box-shadow: 0 6px 22px rgba(0,0,0,.4); transition: transform .15s; }
+.yt-play::after { content: ""; position: absolute; left: 33px; top: 24px; border-style: solid; border-width: 18px 0 18px 29px; border-color: transparent transparent transparent #fff; }
+a.yt:hover .yt-play, a.yt:focus-visible .yt-play { transform: translate(-50%, -50%) scale(1.08); }
+a.yt:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+.archive-hero.has-video { display: grid; grid-template-columns: 1fr 1.25fr; gap: 44px; align-items: center; padding: 64px var(--gutter) 52px; margin-bottom: 34px; background: var(--orange); color: #fff; }
+.archive-hero.has-video h1 { color: #fff; }
+.archive-hero.has-video .lede p { font-size: 17px; }
+.watch-note { font-family: var(--display); font-size: 18px; letter-spacing: .05em; text-transform: uppercase; margin: 22px 0 0; }
+.watch-note .dtag { font-family: var(--sans); vertical-align: 2px; margin-right: 6px; }
+.archive-video { margin: 0; }
+.archive-video .yt { box-shadow: 12px 12px 0 var(--brown); }
+.archive-video figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px; margin-top: 24px; }
+.av-title { font-family: var(--display); font-size: 18px; line-height: 1.3; }
+.archive-video figcaption a { color: #fff; font-weight: 700; white-space: nowrap; }
+.archive-video figcaption a:hover { color: var(--brown); }
+.dtag.watch { background: var(--brown); border-color: var(--brown); color: #fff; }
+.doc-row.has-video { background: #fbf3ec; border-left: 6px solid var(--orange); padding-left: 14px; padding-right: 14px; }
+.dthumb { position: relative; width: 220px; }
+.dthumb img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.dthumb .yt-play { width: 52px; height: 52px; }
+.dthumb .yt-play::after { left: 20px; top: 15px; border-width: 11px 0 11px 18px; }
+.doc-video { margin: 0 0 44px; padding: 18px 18px 16px; background: var(--brown); color: #eee5de; }
+.doc-video + .doc-video { margin-top: -44px; padding-top: 6px; }
+.dv-label { font-family: var(--display); font-size: 18px; letter-spacing: .08em; text-transform: uppercase; color: var(--yellow); margin: 0 0 12px; }
+.doc-video figcaption { font-size: 15px; margin-top: 12px; }
+.doc-video .av-title { display: block; color: #fff; }
+.document table { width: 100%; border-collapse: collapse; margin: 0 0 34px; font-size: 15px; }
+.document th, .document td { text-align: left; vertical-align: top; padding: 9px 12px 9px 0; border-bottom: 1px solid var(--rule); }
+.document th { border-bottom-color: var(--brown); }
+.document img { max-width: 100%; height: auto; }
+
 /* Tablet and phone */
 @media (max-width: 900px) {
   .burger { display: flex; }
@@ -263,6 +299,8 @@ iframe { max-width: 100%; }
   .doc-row { grid-template-columns: 1fr; gap: 5px; }
   .doc-row .ddate { order: -1; }
   .dgo { display: none; }
+  .archive-hero.has-video { grid-template-columns: 1fr; gap: 34px; }
+  .dthumb { width: 100%; max-width: 360px; margin-top: 10px; }
 }
 @media (max-width: 767px) {
   :root { --gutter: 6vw; }
@@ -284,6 +322,11 @@ iframe { max-width: 100%; }
   .news-date { margin-bottom: 8px; }
   .news-title { margin-bottom: 8px; }
   .aside-page, .narrow, .posting, .report, .team, .bio, .plain, .document, .archive-hero { padding-top: 48px; }
+  .archive-video .yt { box-shadow: 8px 8px 0 var(--brown); }
+  .yt-play { width: 64px; height: 64px; }
+  .yt-play::after { left: 25px; top: 18px; border-width: 14px 0 14px 22px; }
+  .doc-video { margin-left: calc(-1 * var(--gutter)); margin-right: calc(-1 * var(--gutter)); }
+  .document table { display: block; overflow-x: auto; }
   .aside-page.auto > h2, .aside-page.auto > p { margin-bottom: 32px; }
   .narrow > ul { padding: 32px 0; }
   .post-nav { flex-direction: column; }
