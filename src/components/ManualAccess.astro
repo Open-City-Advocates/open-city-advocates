@@ -1,0 +1,13 @@
+---
+// How a youth defender gets into the Post-Disposition Defense Manual, which lives
+// on its own sign-in site. Used on the Defense Guide page and the old apply page.
+import { MANUAL_URL } from "../lib/site";
+---
+<hr />
+<div class="manual-access">
+  <p class="manual-access-actions">
+    <a class="btn-solid" href={`${MANUAL_URL}/apply`}>Apply for access</a>
+    <a class="manual-signin" href={`${MANUAL_URL}/sign-in`}>Already approved? Sign in</a>
+  </p>
+  <p class="manual-access-note">Open City Advocates staff review each application and email you when you're approved. After that, you sign in with a one-time link sent to the same email address.</p>
+</div>

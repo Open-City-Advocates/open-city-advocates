@@ -75,20 +75,6 @@ const ogImage = permalink("/images/og-image.jpg");
       li.addEventListener('keydown', function (e) { if (e.key === 'Escape') { close(); btn.focus(); } });
       document.addEventListener('click', function (e) { if (!li.contains(e.target)) close(); });
     });
-
-    // Forms: there is no form server, so a submission becomes an email the
-    // visitor sends from their own email app.
-    document.querySelectorAll('form[data-mailto]').forEach(function (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var lines = [];
-        form.querySelectorAll('input, textarea').forEach(function (field) {
-          if (field.type === 'checkbox') { lines.push(field.name + ': ' + (field.checked ? field.value : 'No')); return; }
-          if (field.value.trim()) lines.push(field.name + ': ' + field.value.trim());
-        });
-        window.location.href = 'mailto:' + form.dataset.mailto + '?subject=' + encodeURIComponent(form.dataset.subject) + '&body=' + encodeURIComponent(lines.join('\n'));
-      });
-    });
   </script>
 </body>
 </html>
