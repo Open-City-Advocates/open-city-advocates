@@ -54,7 +54,7 @@ D.C. has built a ratchet into detention policy. Expansions arrive in moments of 
 
 In 1992, in the middle of the crime wave, the District began dismantling money bail. The reform is remembered for ending detention based on whether a defendant could pay. Detention survived it. In the Bureau of Justice Statistics' samples of D.C. felony filings, the share denied bail rose from 2 percent in May 1990 to 15 percent in May 1992, while the share held on financial bond fell from 28 percent to 17 percent. The total held through disposition barely moved, from 30 percent to 32 percent.² The legal basis for holding people changed much more than the share of people held.
 
-![Chart of D.C. felony filings in May 1990 and May 1992: the share denied bail rose from 2 to 15 percent and the share held on financial bond fell from 28 to 17 percent, while the total held through disposition went from 30 to 32 percent.](/images/policy/2026-10-27-b26-0671-figure-1.png)
+[![Chart of D.C. felony filings in May 1990 and May 1992: the share denied bail rose from 2 to 15 percent and the share held on financial bond fell from 28 to 17 percent, while the total held through disposition went from 30 to 32 percent.](/images/policy/2026-10-27-b26-0671-figure-1.png)](/images/policy/2026-10-27-b26-0671-figure-1.png "Open figure 1 full size")
 
 *Figure 1 · BJS, Felony Defendants in Large Urban Counties, 1990 (App. Table D, p. 26) and 1992 (App. Table E, p. 45)*
 
@@ -62,19 +62,19 @@ The jail was already full. Since fiscal year 1989, the District had been housing
 
 The same pattern of expansion and renewal has played out for children over the last three years. In 2023, the Prioritizing Public Safety Emergency Amendment Act expanded the cases that trigger a rebuttable presumption of detention for a child. It added knives to the weapons that qualify a dangerous crime or crime of violence, and it made murder, first-degree sexual abuse, carjacking, and assault with intent to commit any of them presumptive with no weapon at all.⁶ The Secure DC Omnibus Amendment Act of 2024 carried that expansion forward with an expiration date, and the Peace DC Omnibus Amendment Act of 2025 moved the date to December 31, 2026.⁷ Each renewal kept an expiration date. Section 4(a) would remove it and make the expansion permanent.
 
-![Timeline of the rebuttable presumption of pretrial detention for children: 2023 PPSEA (emergency) adds knives and unarmed offenses; 2024 Secure DC keeps the expansion with an end date; 2025 Peace DC moves the end date to December 31, 2026; 2026 B26-0671 § 4(a) repeals the end date and makes the expansion permanent.](/images/policy/2026-10-27-b26-0671-figure-2.png)
+[![Timeline of the rebuttable presumption of pretrial detention for children: 2023 PPSEA (emergency) adds knives and unarmed offenses; 2024 Secure DC keeps the expansion with an end date; 2025 Peace DC moves the end date to December 31, 2026; 2026 B26-0671 § 4(a) repeals the end date and makes the expansion permanent.](/images/policy/2026-10-27-b26-0671-figure-2.png)](/images/policy/2026-10-27-b26-0671-figure-2.png "Open figure 2 full size")
 
 *Figure 2 · Selected milestones · CJCC Sept. 2026 report, PDF p. 9, Table 2; D.C. Law 25-175 § 18(c); D.C. Law 26-52 § 8(a); B26-0671 § 4(a)*
 
 No consistent count links the early 1990s to today, but the Pretrial Services Agency's recent figures show how extensive continued detention has become. Among felony cases filed in Superior Court, the share held until disposition was 21 percent in fiscal years 2016 and 2017 and about one in four in 2018 through 2020. It rose to 40 percent in fiscal year 2022 and still stood at 34 percent in fiscal year 2025. The 1,190 felony cases held until disposition in fiscal year 2025 were the most in the ten years of data.⁸
 
-![Chart of the share of D.C. felony cases held until disposition, fiscal years 2016 to 2025: 21 percent in 2016, 40 percent in 2022, and 34 percent in 2025, when 1,190 cases were held.](/images/policy/2026-10-27-b26-0671-figure-3.png)
+[![Chart of the share of D.C. felony cases held until disposition, fiscal years 2016 to 2025: 21 percent in 2016, 40 percent in 2022, and 34 percent in 2025, when 1,190 cases were held.](/images/policy/2026-10-27-b26-0671-figure-3.png)](/images/policy/2026-10-27-b26-0671-figure-3.png "Open figure 3 full size")
 
 *Figure 3 · Pretrial Services Agency, Release Rates for Pretrial Defendants fact sheets, FY2016–FY2025, p. 1 of each, felony columns*
 
 The adult CJCC report documents another increase in detention. The Criminal Justice Coordinating Council followed adults charged with a crime of violence or dangerous crime who received a detention hearing, in three six-month intake windows of equal length. Before PPSEA, judges securely detained 52 percent of them. After Secure DC, they detained 65 percent, and the number held after a hearing rose from 203 to 409.⁹ Among the defendants released after those hearings, few were rearrested for a papered offense in any period: 6 percent before PPSEA and 3 percent after Secure DC.¹⁰ The later cohort had both more detention hearings and a higher detention share. The report does not establish that the law caused these changes or that it prevented crime.
 
-![Bar chart of adults charged with a crime of violence or dangerous crime who got a detention hearing: 203 of 393 held (52 percent) before PPSEA, 362 of 712 (51 percent) after PPSEA, and 409 of 629 (65 percent) after Secure DC.](/images/policy/2026-10-27-b26-0671-figure-4.png)
+[![Bar chart of adults charged with a crime of violence or dangerous crime who got a detention hearing: 203 of 393 held (52 percent) before PPSEA, 362 of 712 (51 percent) after PPSEA, and 409 of 629 (65 percent) after Secure DC.](/images/policy/2026-10-27-b26-0671-figure-4.png)](/images/policy/2026-10-27-b26-0671-figure-4.png "Open figure 4 full size")
 
 *Figure 4 · CJCC, An Analysis of Pretrial Detention Before and After Secure DC (May 2025), Table 8, PDF p. 15 · cases, intake Aug.–Jan. of 2022–23, 2023–24, 2024–25*
 

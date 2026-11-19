@@ -68,11 +68,12 @@ misspelled field fails the build instead of being silently ignored.
   page) instead of getting its own page.
 - A policy archive entry with `videos:` (a list of `id`, `title` and optional
   `caption`) shows each YouTube video above its text and is marked Watch in the
-  archive. `id` is the part of the YouTube address after `watch?v=`. The first
-  video in `content/policy-advocacy/_index.md` is the one featured at the top of
-  the archive. Videos load from YouTube only when someone presses play
-  (`src/components/YouTubeVideo.astro`); upload them to OCA's YouTube channel
-  rather than committing video files.
+  archive. `id` is the 11 characters after `watch?v=` in the YouTube address
+  (leave off anything after `&`). The first video in
+  `content/policy-advocacy/_index.md` is the one featured at the top of the
+  archive. The page shows YouTube's thumbnail and loads the player only when
+  someone presses play (`src/components/YouTubeVideo.astro`). Upload videos to
+  OCA's YouTube channel rather than committing video files.
 - The site has no forms. The Defense Guide (and the old apply page) link to the
   Post-Disposition Defense Manual's own sign-in site, `MANUAL_URL` in
   `src/lib/site.ts`, where attorneys apply and sign in. Staff bios link to the
