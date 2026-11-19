@@ -13,27 +13,27 @@ summary: "OCA Previous Updates"
 
 **[AUWCL Alumna's Making a Difference in Human Rights and Community Advocates](https://www.wcl.american.edu/news-events/news/auwcl-alumnas-making-a-difference-in-human-rights-and-community-advocates/)**, July 2023
 
-**[Open City Advocates Legal Internship](https://paper.dropbox.com/s/2023-Legal-Intern-Job-Description-Open-City-Advocates-27ya.pdf)**, Fall 2023
+**Open City Advocates Legal Internship**, Fall 2023
 
 **[Open City Advocates Welcomes Two New Board Members](https://mailchi.mp/6bba96a7b4ff/striving-for-racial-justice-6075869)**, May 2023
 
-**[Hiring: Communications Manager](https://paper.dropbox.com/s/OCA-Communications-Manager-Job-Posting.pdf)**, March 2023
+**[Hiring: Communications Manager](/s/OCA-Communications-Manager-Job-Posting.pdf)**, March 2023
 
 **[Bowser Ousts Director of Youth Rehabilitation Services](https://www.washingtonpost.com/dc-md-va/2023/02/13/bowser-ousts-dyrs-director-hilary-cairns/)**, Washington Post, February 2023
 
-**[Open City Advocates’ 2022 Update](https://paper.dropbox.com/s/2022-Annual-Online-Update.pdf)**, December 2022.
+**[Open City Advocates’ 2022 Update](/s/2022-Annual-Online-Update.pdf)**, December 2022.
 
 **[We’ve Expanded Our Team!](https://mailchi.mp/5e14883bfa37/striving-for-racial-justice-5851123?fbclid=IwAR1lOI_7Lx8w6pp9uaG8BDhY2zAaM8EcL6U-9Ez_53fpRHApW2Yhr_WhF0Q)**, June 2022.
 
-**[Staff Attorney - Post-Commitment Juvenile Defense](https://paper.dropbox.com/s/Staff-Attorney-Job-Description.pdf)**, April 2022.
+**[Staff Attorney - Post-Commitment Juvenile Defense](/s/Staff-Attorney-Job-Description.pdf)**, April 2022.
 
-**[Open City Advocates Legal Fellowship 2021](https://paper.dropbox.com/s/OCA-2021-Legal-Fellow-Posting.pdf)**
+**[Open City Advocates Legal Fellowship 2021](/s/OCA-2021-Legal-Fellow-Posting.pdf)**
 
-**[Open City Advocates Wins Case Expanding Rights for Children,](https://paper.dropbox.com/s/Press-Release-2620.pdf)**
+**[Open City Advocates Wins Case Expanding Rights for Children,](/s/Press-Release-2620.pdf)**
 
 February 2020.
 
-**[Open City Advocates’ 2019 Update,](https://paper.dropbox.com/s/2019-Annual-Update-Final.pdf)**
+**[Open City Advocates’ 2019 Update,](/s/2019-Annual-Update-Final.pdf)**
 
 December 2019.
 
@@ -41,15 +41,15 @@ December 2019.
 
 Washington City Paper, May 2019.
 
-**[Annual Update from Open City Advocates’ CEO, Penelope Spain,](https://paper.dropbox.com/s/2018-Annual-Update.pdf)**
+**[Annual Update from Open City Advocates’ CEO, Penelope Spain,](/s/2018-Annual-Update.pdf)**
 
 December 2018.
 
-**[Interview with Romal Tune, Open City Advocates’ 2018 Donor of the Year,](https://paper.dropbox.com/s/2018-Romal-QA.pdf)**
+**[Interview with Romal Tune, Open City Advocates’ 2018 Donor of the Year,](/s/2018-Romal-QA.pdf)**
 
 December 2018
 
-**[Annual Update from Open City Advocates' CEO, Penelope,](https://paper.dropbox.com/s/2017-OCA-Newsletter-FINAL.pdf)**
+**[Annual Update from Open City Advocates' CEO, Penelope,](/s/2017-OCA-Newsletter-FINAL.pdf)**
 
 December 2017.
 
@@ -61,7 +61,7 @@ Washington Lawyer, November 2017.
 
 January 2017.
 
-**[Annual Update from Open City Advocates' CEO, Penelope Spain,](https://paper.dropbox.com/s/OCA-2016-Newsletter.pdf)**
+**[Annual Update from Open City Advocates' CEO, Penelope Spain,](/s/OCA-2016-Newsletter.pdf)**
 
 December 2016.
 
@@ -77,7 +77,7 @@ July 2016.
 
 March 2016.
 
-**[Annual Update from Open City Advocates' CEO, Penelope Spain](https://paper.dropbox.com/s/OCA-2015-Newsletter.pdf)**, 
+**[Annual Update from Open City Advocates' CEO, Penelope Spain](/s/OCA-2015-Newsletter.pdf)**, 
 
 December 2015.
 
@@ -93,7 +93,7 @@ The Washington Post, August 24, 2014.
 
 August 13, 2014.
 
-**[“The Role Models,”](https://paper.dropbox.com/s/American-University-Magazine-Aug-2014.pdf)**
+**[“The Role Models,”](/s/American-University-Magazine-Aug-2014.pdf)**
 
 American University Magazine, August 2014.
 
@@ -125,7 +125,7 @@ DC Lawyers for Youth, February 2012.
 
 Penelope Spain & Whitney Louchheim receive the 2010-2011 Peter M. Cicchino Public Service Award, April 13, 2011.
 
-**[“Is it Fate?,”](https://paper.dropbox.com/s/Woolly-Mammoth-interview-podcast.mp3)**
+**“Is it Fate?,”**
 
 podcast of Woolly Mammoth Theater’s interview with Penelope Spain and Whitney Louchheim Radio Woolly, Washington, DC, February 2, 2011.
 
@@ -153,11 +153,11 @@ NewsChannel 8, December 8, 2008.
 
 Liberated Muse Productions, Washington, DC, June 25, 2008.
 
-**[“Mentoring Today: Relationships with Youth, Built on Trust,”](https://paper.dropbox.com/s/East-of-the-River-Article-Oct-2006.pdf)**
+**[“Mentoring Today: Relationships with Youth, Built on Trust,”](/s/East-of-the-River-Article-Oct-2006.pdf)**
 
 East of the River, Washington, DC, October 2006.
 
-**[“License to Mentor,”](https://paper.dropbox.com/s/Northwest_Current_Article.pdf)**
+**[“License to Mentor,”](/s/Northwest_Current_Article.pdf)**
 
 Northwest Current, Washington, DC, September 13, 2006.
 
