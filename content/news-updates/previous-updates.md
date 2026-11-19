@@ -13,8 +13,6 @@ summary: "OCA Previous Updates"
 
 **[AUWCL Alumna's Making a Difference in Human Rights and Community Advocates](https://www.wcl.american.edu/news-events/news/auwcl-alumnas-making-a-difference-in-human-rights-and-community-advocates/)**, July 2023
 
-**Open City Advocates Legal Internship**, Fall 2023
-
 **[Open City Advocates Welcomes Two New Board Members](https://mailchi.mp/6bba96a7b4ff/striving-for-racial-justice-6075869)**, May 2023
 
 **[Hiring: Communications Manager](/s/OCA-Communications-Manager-Job-Posting.pdf)**, March 2023
@@ -125,9 +123,9 @@ DC Lawyers for Youth, February 2012.
 
 Penelope Spain & Whitney Louchheim receive the 2010-2011 Peter M. Cicchino Public Service Award, April 13, 2011.
 
-**“Is it Fate?,”**
+**[“Whitney Louchheim & Penelope Spain on Mentoring Newly-Released DC Youth,”](https://woollymammothtc.wordpress.com/2011/02/02/whitney-louchheim-penelope-spain-on-mentoring-newly-released-dc-youth/)**
 
-podcast of Woolly Mammoth Theater’s interview with Penelope Spain and Whitney Louchheim Radio Woolly, Washington, DC, February 2, 2011.
+Woolly Mammoth Theatre Company’s interview with Penelope Spain and Whitney Louchheim, Washington, DC, February 2, 2011.
 
 **[“Young Offenders in Washington Benefit from Volunteer Mentors,”](http://www.thenational.ae/news/worldwide/americas/young-offenders-in-washington-benefit-from-volunteer-mentors)**
 
