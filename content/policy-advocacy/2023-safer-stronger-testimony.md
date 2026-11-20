@@ -1,16 +1,45 @@
 ---
-date: '2023-01-01'
+date: '2023-06-27'
 title: "Safer Stronger Amendment Act"
-docdate: "2023"
-by: "Rondell Jordan · Open City Advocates"
+docdate: "Jun 27, 2023"
+by: "Penelope Spain & Rondell Jordan · Open City Advocates"
 doctype: "Testimony"
 tags: ["Legislation", "Public safety"]
-description: "Written testimony opposing the Safer Stronger Amendment Act as a fear-driven bill that would increase youth incarceration in the District."
+description: "Two testimonies before the DC Council's Committee on the Judiciary and Public Safety opposing B25-291, the Safer Stronger Amendment Act of 2023, as a fear-driven bill that would expand pretrial detention and increase youth incarceration in the District."
 videos:
   - id: "nDLxbOXBz04"
     title: "Rondell Jordan's testimony against B25-291"
     caption: "Rondell Jordan testifying before the Committee on the Judiciary and Public Safety, June 27, 2023."
 ---
+
+**Public Hearing on B25-291, the Safer Stronger Amendment Act of 2023**
+
+**Committee on the Judiciary and Public Safety, Council of the District of Columbia**
+
+**Chairperson Brooke Pinto**
+
+**Tuesday, June 27, 2023**
+
+## Testimony of Penelope Spain, Co-Founder & Chief Executive Officer
+
+Good afternoon. My name is Penelope Spain. I am a resident of Ward 4 and for the past 18 years have served as CEO of Open City Advocates, which provides legal representation and mentoring to youth who have been committed to DYRS. I am staunchly opposed to the vast majority of what the Mayor has dubbed the Safer Stronger Amendment Act; a more apt name might be the Detain and Dehumanize Act. Today, I specifically call your attention to the provision expanding pretrial detention to "protect the child." Locking up our children is anything but protection. This bill would put our kids in cages instead of giving them the care and support they need to thrive. Fully 100% of the kids we lock up will be Black and brown (it's been that way for decades) and our neighborhoods and communities will be no safer for it.
+
+Pre-trial detention of children is fundamentally traumatizing. Anyone who has walked the corridors of the Youth Services Center can feel that in their bones. Despite the flowers out front, the inside of YSC is comprised of cinder block walls, cold cells, and stainless steel toilets. YSC is the sound of sally port doors slamming and children banging their fists on their small, scratched windows….asking to be seen. And it's sometimes hard to look, because when you do, you see children's eyes pleading with you to recognize their humanity – because this place has tried to strip them of it.
+
+And an overwhelming body of research backs up what your gut tells you – incarceration is counterproductive.¹ It is traumatic and dehumanizing, filling our children with a hurt and rage that they will carry beyond those walls, often manifesting in ways that do great harm. As DC's Criminal Justice Coordinating Council has stated repeatedly, "While the juvenile justice system is intended to rehabilitate children, involvement in the system, *particularly secure detention*, is well-established to have lasting negative effects on youth such as increased risk of adult incarceration, decreased likelihood of high school graduation and success in the labor market, and worsening of mental health disorders."²
+
+To look at just one negative outcome of pretrial detention - research shows that incarceration greatly disrupts educational progress and can reduce the likelihood of high school graduation by 26%. This statistic doesn't surprise Open City Advocates in the slightest – as we fight ad nauseam for our clients at YSC to receive basic education, let alone the special education services to which they are entitled. And after release, it's typically our staff attorneys fighting to get our clients reenrolled in school – not the judges, probation officers, or case workers who claimed that a child needed to be locked up in order to get an education.
+
+I understand the Mayor's desire to improve safety. My children and I live in this city, too, and like everyone who lives in or visits DC, we have a human need to feel safe. Yet we already know what we need to do to make our city safer and this bill does *none of it*. Rather than supporting this bill, I urge you to carefully review and implement the recommendations in the DC Juvenile Justice Advisory Group's report entitled, "Create New Opportunities for 'Persons in Need of Supervision' to Succeed Without Legal System Intervention." Or review the Criminal Justice Coordinating Council's "A Study of Factors that Affect the Likelihood of Juvenile Justice System Involvement." That report spells out the underlying needs of DC youth and the protective factors that can keep kids on a path towards success. Rather than putting kids in cages, let's hold the adults accountable for implementing what data and research have already told us can and will work – mentoring, tutoring, recreation, employment programs, economic supports, and robust mental health services. Nowhere in that list is pretrial detention.
+
+Thank you for the opportunity to testify today. I am available to answer any questions.
+
+#### Notes
+
+1. Richard Mendel, Why Youth Incarceration Fails: An Updated Review of the Evidence (The Sentencing Project, March 2023).
+2. "A Study of the Root Causes of Juvenile Justice System Involvement," Criminal Justice Coordinating Council, November 2020.
+
+## Testimony of Rondell Jordan, Staff Attorney
 
 Good afternoon, Chairman Pinto, et al. My name is Rondell Jordan, and I am a resident of Ward 2 and a Staff Attorney for Open City Advocates, which provides legal representation and mentoring to youth who have been committed to DYRS. Open City Advocates is also a member of the Youth Justice Project Coalition, a coalition of DC-based organizations that strives to create a DC where our children, and particularly our Black and Brown children, are free to be kids and are supported throughout their transformation into healthy, thriving adults.
 

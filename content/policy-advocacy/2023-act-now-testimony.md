@@ -1,7 +1,7 @@
 ---
-date: '2023-01-01'
+date: '2023-11-29'
 title: "Addressing Crime Trends Amendment Act of 2023 (ACT NOW)"
-docdate: "2023"
+docdate: "Nov 29, 2023"
 by: "Rondell Jordan · Open City Advocates"
 doctype: "Testimony"
 tags: ["Legislation", "Public safety"]

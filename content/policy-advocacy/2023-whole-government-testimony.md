@@ -1,7 +1,7 @@
 ---
-date: '2023-01-01'
+date: '2023-12-11'
 title: "Whole of Government Response to Crime Act of 2023"
-docdate: "2023"
+docdate: "Dec 11, 2023"
 by: "Joshua Miller · Open City Advocates"
 doctype: "Testimony"
 tags: ["Legislation", "Public safety"]
