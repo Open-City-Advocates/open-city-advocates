@@ -75,12 +75,12 @@ I've been teaching college students for decades and so have a tendency to share 
 
 - ["The Coming of the Super-Predator"](http://www.weeklystandard.com/the-coming-of-the-super-predators/article/8160) (John Dilulio)
 - ["Reprobation as Shared Inquiry"](https://www.pdcnet.org/pdc/bvdb.nsf/purchase?openform&fp=radphilrev&id=radphilrev_2015_0999_4_27_37) (Miller and Levine)
-- ["Partnership, accountability, innovation: Clarifying Boston's experience with focused deterrence."](https://nap.nationalacademies.org/catalog/24928/proactive-policing-effects-on-crime-and-communities) (Braga, Turchan, and Winship)
+- ["Partnership, accountability, innovation: Clarifying Boston's experience with focused deterrence."](https://doi.org/10.1017/9781108278423.011) (Braga, Turchan, and Winship)
 - ["Why the Crime Drop?"](https://eprints.whiterose.ac.uk/97466/1/Farrell%20Tilley%20Tseloni%202014%20Why%20the%20Crime%20Drop%20%28C%26J%20vol43%29.pdf) (Farrell, Tilley, and Tseloni)
 
 #### Models and White Papers
 
 - [Proactive Policing: Effects on Crime and Communities](https://nap.nationalacademies.org/catalog/24928/proactive-policing-effects-on-crime-and-communities) (National Academies of Science, Engineering, and Medicine)
 - [Group Violence Intervention Guide from the National Network for Safe Communities at John Jay College](https://nnscommunities.org/strategies/group-violence-intervention/) (Operation Ceasefire)
-- RAND Corporation Better Policing Toolkit: [Focused Deterrence in Depth](https://nnscommunities.org/strategies/group-violence-intervention/)
+- RAND Corporation Better Policing Toolkit: [Focused Deterrence in Depth](https://www.rand.org/pubs/tools/TL261/better-policing-toolkit/all-strategies/focused-deterrence/in-depth.html)
 - ["Building a Safer High Point"](https://www.highpointnc.gov/DocumentCenter/View/16516/HPCAV-Building-a-Safer-High-Point-2021) (High Point Community Against Violence)
