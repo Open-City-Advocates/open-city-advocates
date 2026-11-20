@@ -68,8 +68,8 @@ Research about mentoring best practices suggests that a punitive approach to men
 2. serving a high proportion of males,
 3. providing ongoing and timely emotional support to the mentors and mentees,
 4. recruiting mentors from targeted sources to create “a good fit between the educational or occupational backgrounds of mentors and the goals of the program,”
-- matching mentoring pairs based on shared interests, and
-- providing a structure through which mentors can advocate **on behalf** of their mentees.
+5. matching mentoring pairs based on shared interests, and
+6. providing a structure through which mentors can advocate **on behalf** of their mentees.
 
 Importantly, programs that include more than six best practices have twice the impact of programs with fewer best practices.⁵
 
