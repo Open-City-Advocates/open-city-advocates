@@ -1,7 +1,7 @@
 ---
-date: '2023-01-01'
+date: '2023-11-08'
 title: "Addressing Crime through Targeted Interventions and Violence Enforcement (\"ACTIVE\") Amendment Act of 2023"
-docdate: "2023"
+docdate: "Nov 8, 2023"
 by: "Rondell Jordan · Open City Advocates"
 doctype: "Testimony"
 tags: ["Legislation", "Public safety"]
