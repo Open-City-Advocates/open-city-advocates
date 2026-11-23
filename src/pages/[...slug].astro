@@ -167,7 +167,7 @@ const ogType = isSection(page) ? "website" : "article";
         <li class="news-item">
           {post.data.image ? (
             <a class="news-thumb" href={pageUrl(post)} tabindex="-1" aria-hidden="true">
-              <img src={`/${post.data.image.replace(/^\//, "")}`} alt="" loading="lazy" />
+              <img src={`/${post.data.image.replace(/^\//, "")}`} alt="" loading="lazy" class:list={{ whole: post.data.imageFit === "whole" }} />
             </a>
           ) : <span />}
           <div class="news-body">

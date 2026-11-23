@@ -3,6 +3,8 @@ title: "Our 2025 Annual Report"
 date: 2025-12-18
 author: "Joshua Miller"
 image: "images/news-2025-annual-report.jpg"
+# Show the whole cover; a square cut loses heads or the title.
+imageFit: "whole"
 summary: "Read all about our work in 2025!"
 ---
 

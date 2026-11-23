@@ -5,6 +5,8 @@ author: "Joshua Miller"
 # Squarespace published this post at the "2024" address; keep it there so old links work.
 url: "/news-updates/our-2024-annual-report"
 image: "images/news-2023-annual-report.jpg"
+# Show the whole cover; a square cut loses heads or the title.
+imageFit: "whole"
 summary: "Read all about our work in 2023!"
 ---
 

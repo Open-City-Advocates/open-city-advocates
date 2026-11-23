@@ -26,6 +26,8 @@ const pages = defineCollection({
       author: z.string().optional(),
       // News list: the thumbnail (under static/) and the excerpt shown with the title.
       image: z.string().optional(),
+      // The list cuts the thumbnail to a square from the middle; "whole" shows all of it inside the square instead.
+      imageFit: z.enum(["whole"]).optional(),
       summary: z.string().optional(),
       // Team bios: the line shown above the name, and the headshot (under static/).
       role: z.string().optional(),
