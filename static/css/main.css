@@ -330,6 +330,7 @@ iframe.yt { min-height: 200px; } /* YouTube's minimum player size */
   .news-item, .news-item:nth-child(even) { grid-template-columns: 1fr; row-gap: 20px; margin-bottom: 39px; }
   .news-item:nth-child(even) > :first-child { order: 0; }
   .news-item:nth-child(even) .news-body { text-align: left; }
+  .news-thumb img.whole { aspect-ratio: auto; }
   .news-date { margin-bottom: 8px; }
   .news-title { margin-bottom: 8px; }
   .aside-page, .narrow, .posting, .report, .team, .bio, .plain, .document, .archive-hero { padding-top: 48px; }
