@@ -54,7 +54,7 @@ Each Markdown file under `content/` is one page. The file's path is its address:
 | `content/our-team.md` | `/our-team` (lists the `staff` and `board` bio pages named in its front matter) |
 | `content/penelope-spain.md` | `/penelope-spain` (a bio; `role` is the line above the name, `photo` the headshot, `email` the address its "To reach …, email …" line links to; bios without `email` show no contact line) |
 | `content/news-updates/_index.md` | `/news-updates` (lists every post in the folder, newest first) |
-| `content/news-updates/<name>.md` | `/news-updates/<name>` (a post; needs `date`; `image` is its thumbnail on the News list, cut square from the middle; `imageFit: "whole"` shows the whole image instead) |
+| `content/news-updates/<name>.md` | `/news-updates/<name>` (a post; needs `date`; `image` is its thumbnail on the News list, shown in a report-cover shape (556 × 720); wider images lose their sides; `imageFit: "whole"` fits the whole image in instead) |
 | `content/policy-advocacy/<name>.md` | `/policy-advocacy/<name>` (testimony; see an existing file for the fields) |
 | `content/join-us/<name>.md` | `/join-us/<name>` (a job posting) |
 
