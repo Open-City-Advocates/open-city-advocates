@@ -3,6 +3,8 @@ title: "The Roots of OCA's Work"
 date: 2024-03-14
 author: "Joshua Miller"
 image: "images/news-roots-of-ocas-work.jpg"
+# Wide image with words across it; fit it whole so none are cut off.
+imageFit: "whole"
 summary: "Our CEO and co-Founder, Penelope Spain, recently appeared on the Public Defenseless podcast with Hunter Parnell. They had a broad-ranging discussion about the founding of Open City Advocates, the state of poverty law instruction in contemporary law schools, and the disparity between those who are assigned public defenders from DC's Public Defender Service and those who are represented by other attorneys."
 ---
 

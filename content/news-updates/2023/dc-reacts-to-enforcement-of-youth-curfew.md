@@ -4,6 +4,8 @@ description: "DC News Now coverage of the youth curfew"
 date: 2023-08-23
 author: "Whitney Louchheim"
 image: "images/news-curfew.jpg"
+# Wide image with words across it; fit it whole so none are cut off.
+imageFit: "whole"
 summary: "DC News Now coverage of the youth curfew"
 ---
 
