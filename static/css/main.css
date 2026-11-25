@@ -280,6 +280,10 @@ iframe.yt { min-height: 200px; } /* YouTube's minimum player size */
 .document th, .document td { text-align: left; vertical-align: top; padding: 9px 12px 9px 0; border-bottom: 1px solid var(--rule); }
 .document th { border-bottom-color: var(--brown); }
 .document img { max-width: 100%; height: auto; }
+.document .story-photo { margin: 0 0 34px; }
+.document .story-photo img { display: block; width: 100%; height: auto; }
+.document .story-photo figcaption { margin-top: 8px; font-size: 14px; line-height: 1.5; color: var(--grey); }
+.document .story-photo-detail { max-width: 640px; }
 
 /* Tablet and phone */
 @media (max-width: 900px) {

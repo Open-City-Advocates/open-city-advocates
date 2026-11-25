@@ -300,7 +300,7 @@ const ogType = isSection(page) ? "website" : "article";
     <Content />
 
     <div class="cite-note">
-      <p>Free to quote and share with attribution.</p>
+      <p>{data.doctype === "Advocacy story" ? "Text may be quoted and shared with attribution." : "Free to quote and share with attribution."}</p>
       <p class="back-link"><a href="/policy-advocacy">&larr; Back to Policy &amp; Advocacy</a></p>
     </div>
   </article>
